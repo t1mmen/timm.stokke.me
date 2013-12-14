@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Slim' => array($vendorDir . '/slim/slim', $vendorDir . '/petebrowne/slim-layout-view'),
+    'Requests' => array($vendorDir . '/rmccue/requests/library'),
 );
