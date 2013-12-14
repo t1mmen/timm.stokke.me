@@ -1,0 +1,11 @@
+{
+  "name": "timm.stokke.me",
+  "version": "0.0.1",
+  "main":"css/main.css",
+  "dependencies": {
+    "bootstrap": "latest",
+    "font-awesome": "latest",
+    "animate.css": "latest"
+  },
+  "devDependencies": {}
+}
