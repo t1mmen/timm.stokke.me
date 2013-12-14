@@ -103,62 +103,6 @@
 
 <?php
 /**********************************************************************
- * EMPLOYMENT HISTORY
- * ****************************************************************** */
- ?>
-
-<section id="employment-history">
-<div class="container">
-
-	<div class="page-header">
-		<h1>Employment history</h1>
-	</div>
-
-	<div class="row">
-
-		<div class="col-md-4 col-sm-4 col-xs-6">
-			<h4>
-				<a href="http://colours.no" target="_blank">Colours AS</a>
-				<br>
-				<small>2011 – now</small>
-			</h4>
-			<p>UI & UX Designer</p>
-		</div>
-
-		<div class="col-md-4 col-sm-4 col-xs-6">
-			<h4>
-				<a href="http://colours.no" target="_blank">Colours AS</a>
-				<br>
-				<small>2007 – 2011</small>
-			</h4>
-			<p>Senior Developer</p>
-		</div>
-
-		<div class="col-md-4 col-sm-4 col-xs-6">
-			<h4>
-				<a href="http://web.archive.org/web/20071010142639/http://www.aspekt.no/"  target="_blank">Aspekt AS</a>
-				<br>
-				<small>2002 – 2007</small>
-			</h4>
-			<p>Partner, Lead Developer</p>
-		</div>
-
-	</div>
-
-	<div class="row">
-		<div class="col-md-12">
-			<p>
-				<a href="http://www.linkedin.com/in/timmstokke" target="_blank" class="btn btn-primary">Learn more on LinkedIn</a>
-			</p>
-		</div>
-	</div>
-
-</div>
-</section>
-
-
-<?php
-/**********************************************************************
  * OPEN SOURCE WORK
  * ****************************************************************** */
 if (isset($this->data->repos)) :
@@ -232,49 +176,57 @@ if (isset($this->data->repos)) :
 </section>
 <?php endif; ?>
 
-
 <?php
 /**********************************************************************
  * EMPLOYMENT HISTORY
  * ****************************************************************** */
  ?>
 
-<section id="contact" class="green footer">
-<!-- ABOUT -->
+<section id="employment-history" class="green">
 <div class="container">
 
 	<div class="page-header">
-		<h1>Get in touch</h1>
+		<h1>Employment history</h1>
 	</div>
 
 	<div class="row">
 
-		<div class="col-md-3 col-sm-3 col-xs-6">
+		<div class="col-md-4 col-sm-4 col-xs-6">
+			<h4>
+				<a href="http://colours.no" target="_blank">Colours AS</a>
+				<br>
+				<small>2011 – now</small>
+			</h4>
+			<p>UI & UX Designer</p>
+		</div>
 
+		<div class="col-md-4 col-sm-4 col-xs-6">
+			<h4>
+				<a href="http://colours.no" target="_blank">Colours AS</a>
+				<br>
+				<small>2007 – 2011</small>
+			</h4>
+			<p>Senior Developer</p>
+		</div>
+
+		<div class="col-md-4 col-sm-4 col-xs-6">
+			<h4>
+				<a href="http://web.archive.org/web/20071010142639/http://www.aspekt.no/"  target="_blank">Aspekt AS</a>
+				<br>
+				<small>2002 – 2007</small>
+			</h4>
+			<p>Partner, Lead Developer</p>
+		</div>
+
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
 			<p>
-				<a href="mailto:timm@stokke.me" class="btn btn-primary btn-block">
-					<i class="fa fa-envelope fa-2x"></i><br>
-					<span class="hidden-xs">timm@stokke.me</span>
-					<span class="visible-xs">email</span>
-				</a>
+				<a href="http://www.linkedin.com/in/timmstokke" target="_blank" class="btn btn-primary">Learn more on LinkedIn</a>
 			</p>
-		</div>
-
-		<div class="col-md-3 col-sm-3 col-xs-6">
-			<p><a href="http://www.linkedin.com/in/timmstokke" class="btn btn-primary btn-block" target="_blank"><i class="fa fa-linkedin fa-2x"></i><br> LinkedIn</a></p>
-		</div>
-
-		<div class="col-md-3 col-sm-3 col-xs-6">
-			<p><a href="https://github.com/t1mmen" class="btn btn-primary  btn-block" target="_blank"><i class="fa fa-github fa-2x"></i><br> Github</a></p>
-		</div>
-
-		<div class="col-md-3 col-sm-3 col-xs-6">
-			<p><a href="https://twitter.com/t1mmen" class="btn btn-primary  btn-block" target="_blank"><i class="fa fa-twitter fa-2x"></i><br>Twitter</a></p>
 		</div>
 	</div>
 
 </div>
-
 </section>
-
-<p class="text-center" style="padding-top: 50px;"> Want a look behind the curtain? <br><a href="https://github.com/t1mmen/timm.stokke.me">Site source is on Github.</a> </p>
