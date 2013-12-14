@@ -3,7 +3,7 @@
  * INTRO
  * ****************************************************************** */
  ?>
-<section class="primary" id="intro">
+<section class="primary" id="intro" style="padding-top: 50px;">
 <div class="container">
 
 	<div class="row">
@@ -16,7 +16,9 @@
 		<div class="col-md-9 col-sm-9">
 
 			<div class="page-header">
-				<h1>Hi there, I'm <a href="#contact">Timm</a>.</h1>
+				<h1>
+					<small>Hi there,</small><br>
+					I'm Timm Stokke.</h1>
 			</div>
 
 			<p class="lead">
@@ -51,7 +53,7 @@
 
 
 			<h3>
-				<i class="fa fa-lightbulb-o fa-2x"></i><br>
+				<i class="fa fa-lightbulb-o fa-2x text-muted"></i><br>
 				Concepts
 			</h3>
 
@@ -64,7 +66,7 @@
 
 
 			<h3>
-				<i class="fa fa-eye fa-2x"></i><br>
+				<i class="fa fa-eye fa-2x text-muted"></i><br>
 				Design
 			</h3>
 			<p>User interface & experience design for web application, websites & mobile apps.</p>
@@ -73,8 +75,8 @@
 		</div>
 		<div class="col-md-3 col-sm-6 col-xs-6">
 
-			<h3>
-				<i class="fa fa-code fa-2x"></i><br>
+			<h3 class="center-block">
+				<i class="fa fa-code fa-2x text-muted"></i><br>
 				Frontend
 			</h3>
 			<p>I am fluent in HTML, CSS and jQuery. I'm dabbeling with JS & frontend MVC frameworks.</p>
@@ -85,7 +87,7 @@
 
 
 			<h3>
-				<i class="fa fa-cog fa-2x"></i><br>
+				<i class="fa fa-cog fa-2x text-muted"></i><br>
 				Backend
 			</h3>
 			<p>
@@ -166,17 +168,15 @@ if (isset($orderedRepos)) :
 
 
 	<div class="row">
-
 		<?php foreach ($orderedRepos as $repo) : ?>
-
 		<div class="col-md-4  col-sm-4 col-xs-12">
+
 			<h4>
 				<a href="<?php echo $repo['html_url'] ?>" target="_blank"><?php echo $repo['name'] ?></a>
 				<small><?php echo $repo['language'] ?></small>
 			</h4>
 
 			<p><?php echo $repo['description'] ?></p>
-
 
 			<p>
 			<small class="text-muted">
@@ -210,10 +210,9 @@ if (isset($orderedRepos)) :
 			</p>
 
 		</div>
-
-
 		<?php endforeach; ?>
-		<!--
+
+
 		<div class="col-md-4">
 			<span class="label invisible">&nbsp;</span>
 			<h4>.. and then some.</h4>
@@ -221,7 +220,6 @@ if (isset($orderedRepos)) :
 				Check out my <a href="https://github.com/t1mmen" target="_blank">Github profile</a> for more projects & contributions.
 			</p>
 		</div>
-		-->
 
 	</div>
 
