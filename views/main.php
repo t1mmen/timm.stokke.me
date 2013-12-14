@@ -154,9 +154,7 @@
 /**********************************************************************
  * OPEN SOURCE WORK
  * ****************************************************************** */
-
-include_once('./lib/remoteContentFetch.php');
-if (isset($orderedRepos)) :
+if (isset($this->data->repos)) :
 ?>
 
 <section id="github">
@@ -168,7 +166,7 @@ if (isset($orderedRepos)) :
 
 
 	<div class="row">
-		<?php foreach ($orderedRepos as $repo) : ?>
+		<?php foreach ($this->data->repos as $repo) : ?>
 		<div class="col-md-4  col-sm-4 col-xs-12">
 
 			<h4>
