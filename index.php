@@ -42,7 +42,7 @@ $app->fetchGithub = function () {
    		$repos = json_decode($response->body, true);
 
 		// Store cache:
-		FileSystemCache::store($key, $repos, 5);
+		FileSystemCache::store($key, $repos, 60*10);
 	}
 
 	// Order Github data:

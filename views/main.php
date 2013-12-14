@@ -116,7 +116,7 @@
 
 	<div class="row">
 
-		<div class="col-md-4 col-sm-4 col-xs-4">
+		<div class="col-md-4 col-sm-4 col-xs-6">
 			<h4>
 				<a href="http://colours.no" target="_blank">Colours AS</a>
 				<br>
@@ -125,7 +125,7 @@
 			<p>UI & UX Designer</p>
 		</div>
 
-		<div class="col-md-4 col-sm-4 col-xs-4">
+		<div class="col-md-4 col-sm-4 col-xs-6">
 			<h4>
 				<a href="http://colours.no" target="_blank">Colours AS</a>
 				<br>
@@ -134,7 +134,7 @@
 			<p>Senior Developer</p>
 		</div>
 
-		<div class="col-md-4 col-sm-4 col-xs-4">
+		<div class="col-md-4 col-sm-4 col-xs-6">
 			<h4>
 				<a href="http://web.archive.org/web/20071010142639/http://www.aspekt.no/"  target="_blank">Aspekt AS</a>
 				<br>
@@ -235,7 +235,13 @@ if (isset($this->data->repos)) :
 
 		<div class="col-md-3 col-sm-3 col-xs-6">
 
-			<p><a href="mailto:timm@stokke.me" class="btn btn-primary btn-block"><i class="fa fa-envelope fa-2x"></i><br> timm@stokke.me</a></p>
+			<p>
+				<a href="mailto:timm@stokke.me" class="btn btn-primary btn-block">
+					<i class="fa fa-envelope fa-2x"></i><br>
+					<span class="hidden-xs">timm@stokke.me</span>
+					<span class="visible-xs">email</span>
+				</a>
+			</p>
 		</div>
 
 		<div class="col-md-3 col-sm-3 col-xs-6">
