@@ -145,6 +145,13 @@
 
 	</div>
 
+	<div class="row">
+		<div class="col-md-12">
+			<p>
+				<a href="http://www.linkedin.com/in/timmstokke" target="_blank" class="btn btn-primary">Learn more on LinkedIn</a>
+			</p>
+		</div>
+	</div>
 
 </div>
 </section>
@@ -161,7 +168,7 @@ if (isset($this->data->repos)) :
 <div class="container">
 
 	<div class="page-header">
-		<h1>My Github repos</h1>
+		<h1>Recent Open Source Work</h1>
 	</div>
 
 
@@ -209,8 +216,17 @@ if (isset($this->data->repos)) :
 
 		</div>
 		<?php endforeach; ?>
+
+
 	</div>
 
+	<div class="row">
+		<div class="col-md-12">
+			<p>
+				<a href="https://github.com/t1mmen/" target="_blank" class="btn btn-primary">Browse more on Github</a>
+			</p>
+		</div>
+	</div>
 
 </div>
 </section>
