@@ -257,3 +257,4 @@ if (isset($orderedRepos)) :
 
 </section>
 
+<p class="text-center" style="padding-top: 50px;"> Want a look behind the curtain? <br><a href="https://github.com/t1mmen/timm.stokke.me">Site source is on Github.</a> </p>
