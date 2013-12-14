@@ -211,16 +211,6 @@ if (isset($orderedRepos)) :
 
 		</div>
 		<?php endforeach; ?>
-
-
-		<div class="col-md-4">
-			<span class="label invisible">&nbsp;</span>
-			<h4>.. and then some.</h4>
-			<p>
-				Check out my <a href="https://github.com/t1mmen" target="_blank">Github profile</a> for more projects & contributions.
-			</p>
-		</div>
-
 	</div>
 
 
@@ -245,26 +235,22 @@ if (isset($orderedRepos)) :
 
 	<div class="row">
 
-		<div class="col-md-3   col-sm-3 col-xs-4">
-			<br>
-			<p><a href="http://www.linkedin.com/in/timmstokke"><i class="fa fa-linkedin fa-2x"></i><br> Timm Stokke</a></p>
+		<div class="col-md-3 col-sm-3 col-xs-6">
+
+			<p><a href="mailto:timm@stokke.me" class="btn btn-primary btn-block"><i class="fa fa-envelope fa-2x"></i><br> timm@stokke.me</a></p>
 		</div>
 
-		<div class="col-md-3 col-sm-3 col-xs-4">
-			<br>
-			<p><a href="mailto:timm@stokke.me"><i class="fa fa-envelope fa-2x"></i><br> timm@stokke.me</a></p>
+		<div class="col-md-3 col-sm-3 col-xs-6">
+			<p><a href="http://www.linkedin.com/in/timmstokke" class="btn btn-primary btn-block" target="_blank"><i class="fa fa-linkedin fa-2x"></i><br> LinkedIn</a></p>
 		</div>
 
-		<div class="col-md-3 col-sm-3 col-xs-4">
-			<br>
-			<p><a href="https://twitter.com/t1mmen"><i class="fa fa-twitter fa-2x"></i><br>@t1mmen</a></p>
+		<div class="col-md-3 col-sm-3 col-xs-6">
+			<p><a href="https://github.com/t1mmen" class="btn btn-primary  btn-block" target="_blank"><i class="fa fa-github fa-2x"></i><br> Github</a></p>
 		</div>
 
-		<div class="col-md-3 col-sm-3 col-xs-4">
-			<br>
-			<p><a href="https://github.com/t1mmen" target="_blank"><i class="fa fa-github fa-2x"></i><br> t1mmen</a></p>
+		<div class="col-md-3 col-sm-3 col-xs-6">
+			<p><a href="https://twitter.com/t1mmen" class="btn btn-primary  btn-block" target="_blank"><i class="fa fa-twitter fa-2x"></i><br>Twitter</a></p>
 		</div>
-
 	</div>
 
 </div>
