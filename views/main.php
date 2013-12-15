@@ -156,7 +156,7 @@ if (isset($this->data->designs)) :
 			<?php echo $design['description']; ?>
 
 			<p>
-			<a href="<?php echo $design['url']; ?>" target="_blank" class="btn btn-primary">visit</a>
+			<a href="<?php echo $design['url']; ?>" target="_blank" class="btn btn-primary btn-sm">visit</a>
 			</p>
 
 		</div>
@@ -181,8 +181,9 @@ if (isset($this->data->repos)) :
 <section id="github">
 <div class="container">
 
+
 	<div class="page-header">
-		<h1>Recent Open Source Work</h1>
+		<h1><i class="fa fa-github text-muted"></i> Recent Open Source Work</h1>
 	</div>
 
 
@@ -230,15 +231,12 @@ if (isset($this->data->repos)) :
 
 		</div>
 		<?php endforeach; ?>
-	</div>
 
-	<div class="row">
 		<div class="col-md-12">
-			<p>
-				<a href="https://github.com/t1mmen/" target="_blank" class="btn btn-primary">Browse more on Github</a>
-			</p>
+			<a href="https://github.com/t1mmen/" target="_blank" class="btn btn-primary btn-sm">Browse more on Github</a>
 		</div>
 	</div>
+
 
 </div>
 </section>
@@ -255,7 +253,7 @@ if (isset($this->data->repos)) :
 <div class="container">
 
 	<div class="page-header">
-		<h1>Employment history</h1>
+		<h1><i class="fa fa-linkedin-square text-muted"></i> Employment history</h1>
 	</div>
 
 	<div class="row">
@@ -287,12 +285,9 @@ if (isset($this->data->repos)) :
 			<p>Partner, Lead Developer</p>
 		</div>
 
-	</div>
-
-	<div class="row">
 		<div class="col-md-12">
 			<p>
-				<a href="http://www.linkedin.com/in/timmstokke" target="_blank" class="btn btn-primary">Learn more on LinkedIn</a>
+				<a href="http://www.linkedin.com/in/timmstokke" target="_blank" class="btn btn-primary btn-sm">Learn more on LinkedIn</a>
 			</p>
 		</div>
 	</div>

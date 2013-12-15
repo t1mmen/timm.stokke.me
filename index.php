@@ -1,4 +1,5 @@
 <?php
+include_once('./config.php');
 include_once('./lib/utils.php');
 require_once('./vendor/autoload.php');
 
@@ -11,11 +12,12 @@ $app = new \Slim\Slim(array(
 ));
 
 // Main route:
-$app->get('/', function () use ($app) {
+$app->get('/', function () use ($app, $config) {
 
 	$app->render('main.php', array(
 		'repos' => $app->fetch_repos,
-		'designs' => $app->fetch_designs
+		'designs' => $app->fetch_designs,
+		'config' => $config,
 	));
 });
 
@@ -86,7 +88,7 @@ $app->fetch_repos = function () {
    		$repos = json_decode($response->body, true);
 
 		// Store cache:
-		FileSystemCache::store($key, $repos, 60*10);
+		FileSystemCache::store($key, $repos, 3600);
 	}
 
 	// Order Github data:
