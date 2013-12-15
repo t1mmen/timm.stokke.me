@@ -60,8 +60,8 @@
 @import "../bower_components/font-awesome/less/font-awesome.less";
 @import "../bower_components/animate.css/animate.less";
 
-@import "bootswatch.less";
-@import "variables.less";
+@import "assets/bootswatch.less";
+@import "assets/variables.less";
 
 @import "assets/owl.carousel.less";
 @import "assets/owl.theme.less";
@@ -177,6 +177,13 @@ footer {
 
 	.viewport {
 		background: #fff;
+		padding-bottom: 40px;
+
+		.owl-controls {
+			position: absolute;
+			bottom: -40px;
+			width: 100%;
+		}
 
 		img {
 			display: block;

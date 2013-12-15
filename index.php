@@ -22,6 +22,7 @@ $app->get('/', function () use ($app) {
 // Designs/portfolio
 $app->fetch_designs = function() {
 	$designs = array(
+		// SPREK
 		array(
 			'media' => array(
 				'img/projects/btsprek1.jpg',
@@ -43,6 +44,23 @@ $app->fetch_designs = function() {
 					I worked on spec, UI & UX, frontend and backend development
 					in the 2010–2013 timeframe. I also acted as project lead for
 					over one year.
+				</p>',
+			),
+		// GCRIEBER
+		array(
+			'media' => array(
+				'img/projects/gcrieber1.jpg',
+				),
+			'client' => 'GCRieber Eiendom',
+			'project_name' => 'Responsive redesign',
+			'url' => 'http://www.gcrieber-eiendom.no',
+			'description' => '
+				<p>
+					GC Rieber Eiendom developes and operates several properties in Bergen, Norway.
+				</p>
+
+				<p>
+					Designed in collaberation with <a href="https://twitter.com/IvarBorthen81" target="_blank"> @IvarBorthen81</a>.
 				</p>',
 			),
 		);

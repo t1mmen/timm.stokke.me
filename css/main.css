@@ -6585,6 +6585,12 @@ footer {
 }
 .browser .viewport {
   background: #fff;
+  padding-bottom: 40px;
+}
+.browser .viewport .owl-controls {
+  position: absolute;
+  bottom: -40px;
+  width: 100%;
 }
 .browser .viewport img {
   display: block;

@@ -228,17 +228,13 @@ if (isset($this->data->designs)) :
 
 			<?php echo $design['description']; ?>
 
-			<a href="http://tur.bt.no" target="_blank" class="btn btn-primary">visit</a>
+			<p>
+			<a href="<?php echo $design['url']; ?>" target="_blank" class="btn btn-primary">visit</a>
+			</p>
 
 		</div>
 
 		<?php endforeach; ?>
-
-
-
-		<div class="col-md-6 col-sm-6 col-xs-12">
-			More coming soon!
-		</div>
 	</div>
 
 
