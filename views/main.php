@@ -103,7 +103,7 @@
 
 <?php
 /**********************************************************************
- * OPEN SOURCE WORK
+ * OPEN SOURCE WORK / CODE PORTFOLIO
  * ****************************************************************** */
 if (isset($this->data->repos)) :
 ?>
@@ -160,8 +160,6 @@ if (isset($this->data->repos)) :
 
 		</div>
 		<?php endforeach; ?>
-
-
 	</div>
 
 	<div class="row">
@@ -175,6 +173,74 @@ if (isset($this->data->repos)) :
 </div>
 </section>
 <?php endif; ?>
+
+<?php
+/**********************************************************************
+ * DESIGN PORTFOLIO
+ * ****************************************************************** */
+if (isset($this->data->designs)) :
+?>
+
+<section id="designs">
+<div class="container">
+
+	<div class="page-header">
+		<h1>Some of my designs</h1>
+	</div>
+
+
+	<div class="row">
+		<?php foreach ($this->data->designs as $design) : ?>
+
+		<div class="col-md-6 col-sm-6 col-xs-12">
+
+			<div class="browser">
+				<div class="chrome">
+					<div class="buttons">
+						<div class="red"></div>
+						<div class="yellow"></div>
+						<div class="green"></div>
+					</div>
+					<a href="http://gcrieber.no" class="address-bar"><?php echo $design['url'] ?></a>
+				</div>
+				<div class="viewport">
+					<?php
+					// Todo implement carousel here.
+					foreach ($design['media'] as $media) {
+						echo "<img src='$media'>";
+					}
+					 ?>
+				</div>
+			</div>
+
+
+			<h4>
+				<small>client</small><br>
+				<?php echo $design['project_name']; ?>
+			</h4>
+
+			<?php echo $design['description']; ?>
+
+			<a href="http://tur.bt.no" target="_blank" class="btn btn-primary">visit</a>
+
+		</div>
+
+		<?php endforeach; ?>
+
+
+
+		<div class="col-md-6 col-sm-6 col-xs-12">
+			More coming soon!
+		</div>
+	</div>
+
+
+
+</div>
+</section>
+<?php endif; ?>
+
+
 
 <?php
 /**********************************************************************

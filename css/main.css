@@ -9768,3 +9768,77 @@ footer {
 .block {
   display: block;
 }
+.browser {
+  margin-bottom: 22px;
+  background: #cccccc;
+  border-radius: 5px;
+}
+.browser .chrome {
+  padding: 7px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.browser .chrome:before,
+.browser .chrome:after {
+  content: " ";
+  display: table;
+}
+.browser .chrome:after {
+  clear: both;
+}
+.browser .chrome:before,
+.browser .chrome:after {
+  content: " ";
+  display: table;
+}
+.browser .chrome:after {
+  clear: both;
+}
+.browser .chrome .address-bar {
+  margin-left: 61px;
+  display: block;
+  padding: 6px;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #555555;
+  background: #fff;
+  border-radius: 3px;
+}
+.browser .chrome .address-bar:hover {
+  color: #4582ec;
+}
+.browser .chrome .buttons {
+  float: left;
+  margin-top: 7px;
+}
+.browser .chrome .buttons > div {
+  margin-right: 6px;
+  float: left;
+  border-radius: 25px;
+  width: 14px;
+  height: 14px;
+  border-bottom: 3px solid;
+}
+.browser .chrome .buttons .red {
+  background-color: #d9534f;
+  border-color: #c9302c;
+}
+.browser .chrome .buttons .yellow {
+  background-color: #f0ad4e;
+  border-color: #ec971f;
+}
+.browser .chrome .buttons .green {
+  background-color: #5cb85c;
+  border-color: #449d44;
+}
+.browser .viewport {
+  padding: 7px;
+}
+.browser .viewport img {
+  border-top: 2px solid #777777;
+  display: block;
+  max-width: 100%;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}

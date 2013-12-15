@@ -13,19 +13,44 @@ $app = new \Slim\Slim(array(
 // Main route:
 $app->get('/', function () use ($app) {
 
-	// Get latest repos from Github:
-	$repos = $app->fetchGithub;
-
 	$app->render('main.php', array(
-		'repos' => $repos
+		'repos' => $app->fetch_repos,
+		'designs' => $app->fetch_designs
 	));
 });
 
+// Designs/portfolio
+$app->fetch_designs = function() {
+	$designs = array(
+		array(
+			'media' => array(
+				'img/projects/btsprek1.jpg',
+				),
+			'client' => 'Bergens Tidende',
+			'project_name' => 'BT Sprek',
+			'url' => 'http://tur.bt.no',
+			'description' => '
+				<p>
+					BT Sprek is a service for finding and taking hikes in and
+					around Bergen and Tromsø, Norway. Available
+					<a target="_blank" href="http://tur.bt.no">on the web</a>,
+					<a target="_blank" href="https://itunes.apple.com/us/app/bt-sprek/id439293777?mt=8">IPhone</a> and
+					<a target="_blank" href="https://play.google.com/store/apps/details?id=no.appy.btsprek&hl=en">Android</a>
+				</p>
 
-/**
- * Get repos from Github
- */
-$app->fetchGithub = function () {
+				<p>
+					I worked on spec, UI & UX, frontend and backend development
+					in the 2010–2013 timeframe. I also acted as project lead for
+					over one year.
+				</p>',
+			),
+		);
+
+	return $designs;
+};
+
+// Github repos:
+$app->fetch_repos = function () {
 
 	// Set up cache:
 	$key = FileSystemCache::generateCacheKey('github');

@@ -50,3 +50,79 @@ footer {
 .block {
 	display: block;
 }
+
+
+// Browser
+@browser-bg: #ccc;
+@browser-border: #777;
+
+.browser {
+	margin-bottom: @line-height-computed;
+	background: @browser-bg;
+	border-radius: 5px;
+
+	.chrome {
+		padding: 7px;
+		.border-top-radius(5px);
+		.clearfix();
+
+		.address-bar {
+			margin-left: 61px;
+			display: block;
+			padding: 6px;
+			font-family: @font-family-sans-serif;
+			font-size: 13px;
+			font-weight: bold;
+			color: @gray;
+
+			background: #fff;
+			border-radius: 3px;
+
+			&:hover {
+				color: @link-color;
+			}
+		}
+
+		.buttons {
+
+			float: left;
+			margin-top: 7px;
+
+			> div {
+				margin-right: 6px;
+				float:left;
+				border-radius: 25px;
+				.square(14px);
+
+				border-bottom: 3px solid;
+			}
+
+			.red {
+				background-color: @brand-danger;
+				border-color:  darken(@brand-danger, 10%);
+			}
+			.yellow {
+				background-color: @brand-warning;
+				border-color:   darken(@brand-warning, 10%);
+			}
+			.green {
+				background-color: @brand-success;
+				border-color:   darken(@brand-success, 10%);
+			}
+		}
+
+	}
+
+
+	.viewport {
+
+		padding: 7px;
+
+		img {
+			border-top: 2px solid @browser-border;
+			display: block;
+			max-width: 100%;
+			.border-bottom-radius(5px);
+		}
+	}
+}
