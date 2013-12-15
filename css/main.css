@@ -9760,3 +9760,11 @@ footer {
 footer {
   border-bottom: 1px solid #b3b3b3;
 }
+.ellipse {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.block {
+  display: block;
+}

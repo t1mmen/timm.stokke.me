@@ -121,7 +121,7 @@ if (isset($this->data->repos)) :
 		<div class="col-md-4  col-sm-4 col-xs-12">
 
 			<h4>
-				<a href="<?php echo $repo['html_url'] ?>" target="_blank"><?php echo $repo['name'] ?></a>
+				<a href="<?php echo $repo['html_url'] ?>" target="_blank" class="ellipse block" title="Browse the <?php echo $repo['name'] ?> repository"><?php echo $repo['name'] ?></a>
 				<small><?php echo $repo['language'] ?></small>
 			</h4>
 
