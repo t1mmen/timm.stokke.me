@@ -25,9 +25,10 @@ $app->fetch_designs = function() {
 		array(
 			'media' => array(
 				'img/projects/btsprek1.jpg',
+				'img/projects/btsprek2.jpg',
 				),
 			'client' => 'Bergens Tidende',
-			'project_name' => 'BT Sprek',
+			'project_name' => 'Sprek',
 			'url' => 'http://tur.bt.no',
 			'description' => '
 				<p>

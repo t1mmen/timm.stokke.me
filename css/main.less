@@ -7,8 +7,12 @@
 @import "bootswatch.less";
 @import "variables.less";
 
-// My overwrites
+// OwlCarousel
+@import "assets/owl.carousel.less";
+@import "assets/owl.theme.less";
 
+
+// My overwrites
 body {
 	border-top: 7px solid @brand-success;
 	padding-bottom: 50px;
@@ -53,11 +57,11 @@ footer {
 
 
 // Browser
+
 @browser-bg: #ccc;
 @browser-border: #777;
 
 .browser {
-	margin-bottom: @line-height-computed;
 	background: @browser-bg;
 	border-radius: 5px;
 
@@ -97,15 +101,15 @@ footer {
 				border-bottom: 3px solid;
 			}
 
-			.red {
+			.exit {
 				background-color: @brand-danger;
 				border-color:  darken(@brand-danger, 10%);
 			}
-			.yellow {
+			.minimize {
 				background-color: @brand-warning;
 				border-color:   darken(@brand-warning, 10%);
 			}
-			.green {
+			.maximize {
 				background-color: @brand-success;
 				border-color:   darken(@brand-success, 10%);
 			}
@@ -115,14 +119,15 @@ footer {
 
 
 	.viewport {
-
-		padding: 0 7px 7px;
+		background: #fff;
 
 		img {
-			border-top: 2px solid @browser-border;
 			display: block;
 			max-width: 100%;
+			border: 7px solid @browser-bg;
+			border-top-width: 0;
 			.border-bottom-radius(5px);
 		}
 	}
+
 }

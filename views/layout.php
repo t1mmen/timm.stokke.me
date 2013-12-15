@@ -20,6 +20,7 @@
 
 
 		<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
 		<script src="js/main.js"></script>
 
 		<script type="text/javascript">

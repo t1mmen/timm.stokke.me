@@ -197,25 +197,32 @@ if (isset($this->data->designs)) :
 			<div class="browser">
 				<div class="chrome">
 					<div class="buttons">
-						<div class="red"></div>
-						<div class="yellow"></div>
-						<div class="green"></div>
+						<div class="exit"></div>
+						<div class="minimize"></div>
+						<div class="maximize"></div>
 					</div>
-					<a href="http://gcrieber.no" class="address-bar"><?php echo $design['url'] ?></a>
+					<a href="<?php echo $design['url'] ?>" class="address-bar"><?php echo $design['url'] ?></a>
 				</div>
 				<div class="viewport">
+
+					<div class="owl-carousel">
 					<?php
-					// Todo implement carousel here.
 					foreach ($design['media'] as $media) {
-						echo "<img src='$media'>";
+						echo "<div><img src='$media' data-src='$media' class='lazyOwl'></div>";
 					}
 					 ?>
+					</div>
+
 				</div>
 			</div>
 
+			<h4 class="pull-right text-right">
+				<small>client</small><br>
+				<?php echo $design['client']; ?>
+			</h4>
 
 			<h4>
-				<small>client</small><br>
+				<small>project</small><br>
 				<?php echo $design['project_name']; ?>
 			</h4>
 

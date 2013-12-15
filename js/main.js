@@ -23,6 +23,12 @@ $(document).ready(function() {
 
 	});
 
+	// Carousel:
+	$(".owl-carousel").owlCarousel({
+		singleItem:true,
+	});
+
+
 	// Smooth scroll to #target's.
 	// Inspired by http://eriktailor.com Flatbook theme.
 	var navBar = $("header"),

@@ -5,7 +5,8 @@
   "dependencies": {
     "bootstrap": "latest",
     "font-awesome": "latest",
-    "animate.css": "latest"
+    "animate.css": "latest",
+    "owlcarousel":"https://github.com/OwlFonk/OwlCarousel.git"
   },
   "devDependencies": {}
 }
