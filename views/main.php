@@ -103,6 +103,76 @@
 
 <?php
 /**********************************************************************
+ * DESIGN PORTFOLIO
+ * ****************************************************************** */
+if (isset($this->data->designs)) :
+?>
+
+<section id="designs">
+<div class="container">
+
+	<div class="page-header">
+		<h1>Some of my designs</h1>
+	</div>
+
+
+	<div class="row">
+		<?php foreach ($this->data->designs as $design) : ?>
+
+		<div class="col-md-6 col-sm-6 col-xs-12">
+
+			<div class="browser">
+				<div class="chrome">
+					<div class="buttons">
+						<div class="exit"></div>
+						<div class="minimize"></div>
+						<div class="maximize"></div>
+					</div>
+					<a href="<?php echo $design['url'] ?>" class="address-bar"><?php echo $design['url'] ?></a>
+				</div>
+				<div class="viewport">
+
+					<div class="owl-carousel">
+					<?php
+					foreach ($design['media'] as $media) {
+						echo "<div><img src='$media' data-src='$media' class='lazyOwl'></div>";
+					}
+					 ?>
+					</div>
+
+				</div>
+			</div>
+
+			<h4 class="pull-right text-right">
+				<small>client</small><br>
+				<?php echo $design['client']; ?>
+			</h4>
+
+			<h4>
+				<small>project</small><br>
+				<?php echo $design['project_name']; ?>
+			</h4>
+
+			<?php echo $design['description']; ?>
+
+			<p>
+			<a href="<?php echo $design['url']; ?>" target="_blank" class="btn btn-primary">visit</a>
+			</p>
+
+		</div>
+
+		<?php endforeach; ?>
+	</div>
+
+
+
+</div>
+</section>
+<?php endif; ?>
+
+
+<?php
+/**********************************************************************
  * OPEN SOURCE WORK / CODE PORTFOLIO
  * ****************************************************************** */
 if (isset($this->data->repos)) :
@@ -173,76 +243,6 @@ if (isset($this->data->repos)) :
 </div>
 </section>
 <?php endif; ?>
-
-<?php
-/**********************************************************************
- * DESIGN PORTFOLIO
- * ****************************************************************** */
-if (isset($this->data->designs)) :
-?>
-
-<section id="designs">
-<div class="container">
-
-	<div class="page-header">
-		<h1>Some of my designs</h1>
-	</div>
-
-
-	<div class="row">
-		<?php foreach ($this->data->designs as $design) : ?>
-
-		<div class="col-md-6 col-sm-6 col-xs-12">
-
-			<div class="browser">
-				<div class="chrome">
-					<div class="buttons">
-						<div class="exit"></div>
-						<div class="minimize"></div>
-						<div class="maximize"></div>
-					</div>
-					<a href="<?php echo $design['url'] ?>" class="address-bar"><?php echo $design['url'] ?></a>
-				</div>
-				<div class="viewport">
-
-					<div class="owl-carousel">
-					<?php
-					foreach ($design['media'] as $media) {
-						echo "<div><img src='$media' data-src='$media' class='lazyOwl'></div>";
-					}
-					 ?>
-					</div>
-
-				</div>
-			</div>
-
-			<h4 class="pull-right text-right">
-				<small>client</small><br>
-				<?php echo $design['client']; ?>
-			</h4>
-
-			<h4>
-				<small>project</small><br>
-				<?php echo $design['project_name']; ?>
-			</h4>
-
-			<?php echo $design['description']; ?>
-
-			<p>
-			<a href="<?php echo $design['url']; ?>" target="_blank" class="btn btn-primary">visit</a>
-			</p>
-
-		</div>
-
-		<?php endforeach; ?>
-	</div>
-
-
-
-</div>
-</section>
-<?php endif; ?>
-
 
 
 <?php
