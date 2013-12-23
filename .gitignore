@@ -16,3 +16,4 @@ node_modules/
 cache/
 composer.lock
 config.php
+js/build/
