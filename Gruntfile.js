@@ -20,7 +20,6 @@ module.exports = function(grunt) {
 		concat: {
 			dist: {
 				src: [
-					'bower_components/jquery/jquery.min.js',
 					'bower_components/owlcarousel/owl-carousel/owl.carousel.min.js',
 					'js/main.js'  // All local JS files
 				],

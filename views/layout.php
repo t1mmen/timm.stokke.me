@@ -6,7 +6,7 @@
 		<title>Hi, I am Timm Stokke</title>
 		<meta name="description" content="I've been passionately building websites, services and apps for web & mobile devices since 1997.">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/main.min.css">
 		<link rel="author" href="https://plus.google.com/107766367797089659313">
 		<link rel="canonical" href="http://timm.stokke.me">
 	</head>
@@ -22,8 +22,7 @@
 
 
 		<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-		<script src="js/owl.carousel.min.js"></script>
-		<script src="js/main.js"></script>
+		<script src="js/main.min.js"></script>
 
 		<script type="text/javascript">
 		var _gaq = _gaq || [];
