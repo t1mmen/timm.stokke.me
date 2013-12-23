@@ -17,3 +17,4 @@ cache/
 composer.lock
 config.php
 js/build/
+dploy.yaml
