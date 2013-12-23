@@ -12,5 +12,7 @@ Thumbs.db
 # Project specific #
 ######################
 bower_components/
+node_modules/
 cache/
 composer.lock
+config.php
