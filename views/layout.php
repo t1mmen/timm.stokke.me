@@ -4,9 +4,11 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>Hi, I am Timm Stokke</title>
-		<meta name="description" content="Learn more about Timm Stokke. That's me, btw.">
-		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="I've been passionately building websites, services and apps for web & mobile devices since 1997.">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/main.css">
+		<link rel="author" href="https://plus.google.com/107766367797089659313">
+		<link rel="canonical" href="http://timm.stokke.me">
 	</head>
 	<body>
 
