@@ -4,7 +4,7 @@ timm.stokke.me
 My personal homepage
 
 
-### Install
+### Install & build process:
 
 ```
 mkdir homepage
@@ -12,16 +12,16 @@ cd homepage
 git checkout https://github.com/t1mmen/timm.stokke.me.git
 ```
 
-If you want to build the project, you also need to install all [Bower](http://bower.io/)
-components by running.
+If you want to build the project, you also need to install the [Bower](http://bower.io/)
+components & [Grunt.js](http://gruntjs.com/) dependencies.
 
 ```
 bower install
-```
-
-And finally, install required [Grunt.js](http://gruntjs.com/) plugins and run:
-
-```
 npm install
+```
+
+And finally, build the project:
+
+```
 grunt
 ```
