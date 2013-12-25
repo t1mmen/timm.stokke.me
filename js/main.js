@@ -16,10 +16,13 @@ $(document).ready(function() {
 		e.preventDefault();
 
 		var $this = $(this),
-			$target = $this.data('target');
-		$($target).removeClass('hide').addClass('flipInX');
+			$target = $($this.data('target')),
+			targetAnimationIn = 'slideInLeft',
+			btnAnimationOut = 'slideOutRight';
 
-		$this.addClass('animated fadeOutDown');
+		$target.removeClass('hide').addClass(targetAnimationIn);
+
+		$this.addClass('animated ' + btnAnimationOut);
 
 	});
 

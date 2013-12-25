@@ -95,8 +95,51 @@
 			</p>
 
 		</div>
-	</div>
 
+		<div class="col-md-12">
+			<a href=".buzzwords" data-target=".buzzwords" class="js-expand btn btn-primary btn-sm">Tell me more...</a>
+
+			<div class="buzzwords animated hide">
+
+				<h3>
+					Technologies, methodologies, Tools
+				</h3>
+
+				<p>
+					This should give you a general idea of what I'm familiar with.
+					Check out <a href="http://www.linkedin.com/in/timmstokke" target="_blank">my skills & expertise on LinkedIn</a>,
+					browse my <a href="http://github.com/t1mmen">Github profile</a> or <a href="#contact">get in touch</a> if you need to know
+					more about my skillset.
+				</p>
+
+				<p>
+				<ul class="columns">
+					<li>CSS3</li>
+					<li>HTML5</li>
+					<li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
+					<li>Javascript</li>
+					<li><a href="http://knockoutjs.com/" target="_blank">Knockout.JS</a></li>
+					<li><a href="http://gruntjs.com/" target="_blank">Grunt</a></li>
+					<li><a href="http://bower.io/" target="_blank">Bower</a></li>
+					<li><a href="http://php.net" target="_blank">PHP</a></li>
+					<li><a href="http://cakephp.org">CakePHP</a></li>
+					<li><a href="http://www.slimframework.com/" target="_blank">Slim framework</a></li>
+					<li><a href="http://mysql.com">MySQL</a></li>
+					<li><a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller" target="_blank">MVC</a></li>
+					<li><a href="http://getcomposer.org">Composer</a></li>
+					<li><a href="http://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank">RESTful API's</a></li>
+					<li>Photoshop CS</li>
+					<li><a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself" target="_blank">DRY</a></li>
+					<li><a href="http://balsamiq.com/" target="_blank">Balsamiq mockups</a></li>
+					<li><a href="http://www.sublimetext.com/" target="_blank">Sublime Text</a></li>
+					<li><a href="http://www.bohemiancoding.com/sketch/" target="_blank">Sketch</a></li>
+					<li><a href="http://en.wikipedia.org/wiki/Agile_software_development" target="_blank">Agile / Kanban</a></li>
+				</ul>
+				</p>
+
+			</div>
+		</div>
+	</div>
 </div>
 </section>
 
