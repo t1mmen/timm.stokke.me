@@ -27,28 +27,25 @@ $(document).ready(function() {
 	});
 
 	// Carousel:
-	$(".owl-carousel").owlCarousel({
-		singleItem:true,
+	$('.owl-carousel').owlCarousel({
+		singleItem:true
 	});
 
 
 	// Smooth scroll to #target's.
-	// Inspired by http://eriktailor.com Flatbook theme.
-	var navBar = $("header"),
-		navBarHeight = navBar.outerHeight()+1,
-		menuItems = $("header li a");
-
-	menuItems.click(function(e){
-		var href = $(this).attr("href"),
-				offsetTop = href === "#" ? 0 : $(href).offset().top-navBarHeight;
-		$('html, body').stop().animate({
-				scrollTop: offsetTop
-		}, 600);
-
-		e.preventDefault();
-
+	// From: http://css-tricks.com/snippets/jquery/smooth-scrolling/
+	$('a[href*=#]:not([href=#])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				$('html,body').animate({
+					scrollTop: target.offset().top-50
+				}, 600);
+				return false;
+			}
+		}
 	});
-
 
 
 

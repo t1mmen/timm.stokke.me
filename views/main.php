@@ -97,9 +97,9 @@
 		</div>
 
 		<div class="col-md-12">
-			<a href=".buzzwords" data-target=".buzzwords" class="js-expand btn btn-primary btn-sm">Tell me more...</a>
+			<a href="#buzzwords" data-target=".buzzwords" class="js-expand btn btn-primary btn-sm">Tell me more...</a>
 
-			<div class="buzzwords animated hide">
+			<div id="buzzwords" class="buzzwords animated hide">
 
 				<h3>
 					Technologies, methodologies, Tools
