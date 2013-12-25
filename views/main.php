@@ -118,18 +118,19 @@
 					<li>HTML5</li>
 					<li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
 					<li>Javascript</li>
-					<li><a href="http://knockoutjs.com/" target="_blank">Knockout.JS</a></li>
+					<li><a href="http://knockoutjs.com/" target="_blank">KnockoutJS</a></li>
+					<li><a href="http://getcomposer.org">Composer</a></li>
 					<li><a href="http://gruntjs.com/" target="_blank">Grunt</a></li>
 					<li><a href="http://bower.io/" target="_blank">Bower</a></li>
 					<li><a href="http://php.net" target="_blank">PHP</a></li>
 					<li><a href="http://cakephp.org">CakePHP</a></li>
-					<li><a href="http://www.slimframework.com/" target="_blank">Slim framework</a></li>
+					<li><a href="http://www.slimframework.com/" target="_blank">Slim PHP framework</a></li>
 					<li><a href="http://mysql.com">MySQL</a></li>
 					<li><a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller" target="_blank">MVC</a></li>
-					<li><a href="http://getcomposer.org">Composer</a></li>
+					<li><a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself" target="_blank">DRY</a></li>
 					<li><a href="http://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank">RESTful API's</a></li>
 					<li>Photoshop CS</li>
-					<li><a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself" target="_blank">DRY</a></li>
+					<li>Pen & Paper</li>
 					<li><a href="http://balsamiq.com/" target="_blank">Balsamiq mockups</a></li>
 					<li><a href="http://www.sublimetext.com/" target="_blank">Sublime Text</a></li>
 					<li><a href="http://www.bohemiancoding.com/sketch/" target="_blank">Sketch</a></li>
@@ -329,9 +330,7 @@ if (isset($this->data->repos)) :
 		</div>
 
 		<div class="col-md-12">
-			<p>
-				<a href="http://www.linkedin.com/in/timmstokke" target="_blank" class="btn btn-primary btn-sm">Learn more on LinkedIn</a>
-			</p>
+			<a href="http://www.linkedin.com/in/timmstokke" target="_blank" class="btn btn-primary btn-sm">Learn more on LinkedIn</a>
 		</div>
 	</div>
 
