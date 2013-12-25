@@ -124,11 +124,16 @@ ul {
 	.content-columns(@column-count; @column-gap: @grid-gutter-width);
 }
 
+@media (max-width: @screen-md-min) {
+	.columns {
+		@column-count: 3;
+		.content-columns(@column-count; @column-gap: @grid-gutter-width);
+	}
+}
+
 @media (max-width: @screen-sm-min) {
-	// Long lists & columns
 	.columns {
 		@column-count: 2;
-		@column-gap: 20px;
 		.content-columns(@column-count; @column-gap: @grid-gutter-width);
 	}
 }

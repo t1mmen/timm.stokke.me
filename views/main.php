@@ -101,15 +101,16 @@
 
 			<div id="buzzwords" class="buzzwords animated hide">
 
-				<h3>
-					Technologies, methodologies, Tools
-				</h3>
+				<div class="page-header">
+					<h1>I know...</h1>
+				</div>
+
 
 				<p>
-					This should give you a general idea of what I'm familiar with.
+					This should give you a general idea of what I'm familiar with when it comes to technologies, tools and methodologies.
 					Check out <a href="http://www.linkedin.com/in/timmstokke" target="_blank">my skills & expertise on LinkedIn</a>,
 					browse my <a href="http://github.com/t1mmen">Github profile</a> or <a href="#contact">get in touch</a> if you need to know
-					more about my skillset.
+					more about my skillset. In keyword form:
 				</p>
 
 				<p>
@@ -132,6 +133,7 @@
 					<li>Photoshop CS</li>
 					<li>Pen & Paper</li>
 					<li><a href="http://balsamiq.com/" target="_blank">Balsamiq mockups</a></li>
+					<li><a href="http://framerjs.com/" target="_blank">FramerJS</a></li>
 					<li><a href="http://www.sublimetext.com/" target="_blank">Sublime Text</a></li>
 					<li><a href="http://www.bohemiancoding.com/sketch/" target="_blank">Sketch</a></li>
 					<li><a href="http://en.wikipedia.org/wiki/Agile_software_development" target="_blank">Agile / Kanban</a></li>
@@ -336,3 +338,40 @@ if (isset($this->data->repos)) :
 
 </div>
 </section>
+
+
+<?php
+/**********************************************************************
+ * TIMELINE
+ * ****************************************************************** */
+if (isset($this->data->timeline)) :
+?>
+
+<section id="timeline">
+<div class="container">
+
+	<div class="page-header">
+		<h1>Timeline</h1>
+	</div>
+
+
+	<div class="row">
+		<div class="col-md-12">
+
+			<ul class="timeline">
+			<?php foreach ($this->data->timeline as $timeline) : ?>
+				<li>
+					<small><?php echo $timeline['year']; ?></small>
+					<h6><?php echo $timeline['title']; ?></h6>
+					<p><?php echo $timeline['description']; ?></p>
+				</li>
+
+			<?php endforeach; ?>
+			</ul>
+		</div>
+	</div>
+
+</div>
+</section>
+<?php endif; ?>
+

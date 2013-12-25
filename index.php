@@ -17,6 +17,7 @@ $app->get('/', function () use ($app, $config) {
 	$app->render('main.php', array(
 		'repos' => $app->fetch_repos,
 		'designs' => $app->fetch_designs,
+		//'timeline' => $app->fetch_timeline,
 		'config' => $config,
 	));
 });
@@ -131,6 +132,42 @@ $app->fetch_repos = function () {
 	$orderedRepos = array_slice($orderedRepos, 0, 3);
 
 	return $orderedRepos;
+};
+
+$app->fetch_timeline = function () {
+	$timeline = array(
+		array(
+			'title' => 'Joined my first startup',
+			'year' => 2001,
+			'description' => 'Hired by my former teacher, bootstrapped.',
+			),
+		array(
+			'title' => 'Shipped 2net Publish',
+			'year' => 2004,
+			'description' => 'My first major SaaS launch.',
+			),
+		array(
+			'title' => 'Aquihired',
+			'year' => 2007,
+			'description' => 'Colours bought Aspekt.',
+			),
+		array(
+			'title' => 'Designed apartment blueprints',
+			'year' => 2009,
+			'description' => '>Designing living spaces proved a fun challenge.',
+			),
+		array(
+			'title' => 'Shipped BT Sprek',
+			'year' => 2012,
+			'description' => false,
+			),
+		array(
+			'title' => 'Moving to Canada',
+			'year' => 2014,
+			'description' => false,
+			),
+		);
+	return $timeline;
 };
 
 $app->run();
