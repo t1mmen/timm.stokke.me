@@ -12,7 +12,21 @@ module.exports = function(grunt) {
 		copy: {
 			main: {
 				files: [
-					{expand: true, src: ['bower_components/font-awesome/fonts/*'], dest: 'fonts/', filter: 'isFile'},
+					{
+						expand: true,
+						src: ['bower_components/font-awesome/fonts/*'],
+						dest: 'fonts/',
+						filter: 'isFile'
+					},
+					// Rename .css to .less to parse instead of @import.
+					{
+						expand: true,
+						src: ['bower_components/animate.css/animate.min.css'],
+						dest: 'bower_components/animate.css/',
+						rename: function(dest, src) {
+							return dest + 'animate.less'
+						}
+					},
 				]
 			}
 		},

@@ -1,23 +1,24 @@
 {
-	"name": "timmstokke",
-	"author": "Timm Stokke",
-	"version": "0.1.0",
-	"repository": {
-		"type": "git",
-		"url": "git@github.com:t1mmen/timm.stokke.me.git"
-	},
-	"keywords": [
-		"Homepage",
-		"Portfolio",
-		"CV"
-	],
-	"devDependencies": {
-		"grunt": "~0.4.2",
-		"grunt-contrib-concat": "~0.3.0",
-		"grunt-contrib-uglify": "~0.2.7",
-		"grunt-contrib-imagemin": "~0.4.0",
-		"grunt-contrib-watch": "~0.5.3",
-		"grunt-contrib-less": "~0.8.3",
-		"grunt-contrib-copy": "~0.4.1"
-	}
+  "name": "timmstokke",
+  "author": "Timm Stokke",
+  "description": "My personal homepage",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:t1mmen/timm.stokke.me.git"
+  },
+  "keywords": [
+    "Homepage",
+    "Portfolio",
+    "CV"
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-imagemin": "~0.4.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-less": "~0.8.3",
+    "grunt-contrib-copy": "~0.4.1"
+  }
 }
