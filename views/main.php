@@ -281,6 +281,7 @@ if (isset($this->data->repos)) :
 /**********************************************************************
  * EMPLOYMENT HISTORY
  * ****************************************************************** */
+if (isset($this->data->jobs)) :
  ?>
 
 <section id="employment-history" class="green">
@@ -291,33 +292,19 @@ if (isset($this->data->repos)) :
 	</div>
 
 	<div class="row">
+		<?php foreach ($this->data->jobs as $job) : ?>
 
-		<div class="col-md-4 col-sm-4 col-xs-6">
-			<h4>
-				<a href="http://colours.no" target="_blank">Colours AS</a>
-				<br>
-				<small>2011 – now</small>
-			</h4>
-			<p>UI & UX Designer</p>
-		</div>
 
-		<div class="col-md-4 col-sm-4 col-xs-6">
-			<h4>
-				<a href="http://colours.no" target="_blank">Colours AS</a>
-				<br>
-				<small>2007 – 2011</small>
-			</h4>
-			<p>Senior Developer</p>
-		</div>
+			<div class="col-md-4 col-sm-4 col-xs-6">
+				<h4>
+					<a href="<?php echo $job['url'] ?>" target="_blank"><?php echo $job['company'] ?></a>
+					<br>
+					<small><?php echo $job['timeframe']; ?></small>
+				</h4>
+				<p><?php echo $job['title'] ?></p>
+			</div>
 
-		<div class="col-md-4 col-sm-4 col-xs-6">
-			<h4>
-				<a href="http://web.archive.org/web/20071010142639/http://www.aspekt.no/"  target="_blank">Aspekt AS</a>
-				<br>
-				<small>2002 – 2007</small>
-			</h4>
-			<p>Partner, Lead Developer</p>
-		</div>
+		<?php endforeach; ?>
 
 		<div class="col-md-12">
 			<a href="http://www.linkedin.com/in/timmstokke" target="_blank" class="btn btn-primary btn-sm">Learn more on LinkedIn</a>
@@ -326,7 +313,7 @@ if (isset($this->data->repos)) :
 
 </div>
 </section>
-
+<?php endif; ?>
 
 <?php
 /**********************************************************************

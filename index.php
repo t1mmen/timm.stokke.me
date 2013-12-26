@@ -18,10 +18,41 @@ $app->get('/', function () use ($app, $config) {
 		'skills' => $app->fetch_skills,
 		'repos' => $app->fetch_repos,
 		'designs' => $app->fetch_designs,
+		'jobs' => $app->fetch_jobs,
 		//'timeline' => $app->fetch_timeline,
 		'config' => $config,
 	));
 });
+
+
+
+// Jobs
+$app->fetch_jobs = function() {
+	$jobs = array(
+		array(
+			'timeframe' => '2011 - now',
+			'company' => 'Colours AS',
+			'title' => 'UI & UX Developer',
+			'url' => 'http://colours.no',
+			),
+		array(
+			'timeframe' => '2007 - 2011',
+			'company' => 'Colours AS',
+			'title' => 'Senior Developer',
+			'url' => 'http://colours.no',
+			),
+		array(
+			'timeframe' => '2001 - 2007',
+			'company' => 'Aspekt AS',
+			'title' => 'Partner, Lead Developer',
+			'url' => 'http://web.archive.org/web/20071010142639/http://www.aspekt.no/',
+			),
+
+		);
+
+	return $jobs;
+};
+
 
 // Skills
 $app->fetch_skills = function() {
@@ -48,14 +79,6 @@ $app->fetch_skills = function() {
 				'url' => 'http://knockoutjs.com',
 				),
 			array(
-				'title' => 'Grunt',
-				'url' => 'http://gruntjs.com/',
-				),
-			array(
-				'title' => 'Bower',
-				'url' => 'http://bower.io',
-				),
-			array(
 				'title' => 'Bootstrap 2/3',
 				'url' => 'http://getbootstrap.com',
 				),
@@ -76,10 +99,6 @@ $app->fetch_skills = function() {
 			array(
 				'title' => 'MySQL',
 				'url' => 'http://mysql.com',
-				),
-			array(
-				'title' => 'Composer',
-				'url' => 'http://getcomposer.org',
 				),
 			),
 		'Design & Concept' => array(
@@ -120,6 +139,18 @@ $app->fetch_skills = function() {
 			array(
 				'title' => "RESTful API's",
 				'url' => 'http://en.wikipedia.org/wiki/Representational_state_transfer',
+				),
+			array(
+				'title' => 'Composer',
+				'url' => 'http://getcomposer.org',
+				),
+			array(
+				'title' => 'Grunt',
+				'url' => 'http://gruntjs.com/',
+				),
+			array(
+				'title' => 'Bower',
+				'url' => 'http://bower.io',
 				),
 			array(
 				'title' => 'Github',
