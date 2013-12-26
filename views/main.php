@@ -113,32 +113,20 @@
 					more about my skillset. In keyword form:
 				</p>
 
-				<p>
 				<ul class="columns">
-					<li>CSS3</li>
-					<li>HTML5</li>
-					<li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
-					<li>Javascript</li>
-					<li><a href="http://knockoutjs.com/" target="_blank">KnockoutJS</a></li>
-					<li><a href="http://getcomposer.org">Composer</a></li>
-					<li><a href="http://gruntjs.com/" target="_blank">Grunt</a></li>
-					<li><a href="http://bower.io/" target="_blank">Bower</a></li>
-					<li><a href="http://php.net" target="_blank">PHP</a></li>
-					<li><a href="http://cakephp.org">CakePHP</a></li>
-					<li><a href="http://www.slimframework.com/" target="_blank">Slim PHP framework</a></li>
-					<li><a href="http://mysql.com">MySQL</a></li>
-					<li><a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller" target="_blank">MVC</a></li>
-					<li><a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself" target="_blank">DRY</a></li>
-					<li><a href="http://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank">RESTful API's</a></li>
-					<li>Photoshop CS</li>
-					<li>Pen & Paper</li>
-					<li><a href="http://balsamiq.com/" target="_blank">Balsamiq mockups</a></li>
-					<li><a href="http://framerjs.com/" target="_blank">FramerJS</a></li>
-					<li><a href="http://www.sublimetext.com/" target="_blank">Sublime Text</a></li>
-					<li><a href="http://www.bohemiancoding.com/sketch/" target="_blank">Sketch</a></li>
-					<li><a href="http://en.wikipedia.org/wiki/Agile_software_development" target="_blank">Agile / Kanban</a></li>
+
+					<?php foreach ($this->data->skills as $skillGroup => $skillSet) : ?>
+
+						<li><h5><?php echo $skillGroup; ?></h5></li>
+
+						<?php foreach ($skillSet as $skill) : ?>
+						<li>
+							<a href="<?php echo $skill['url']; ?>" target="_blank"><?php echo $skill['title']; ?></a>
+						</li>
+						<?php endforeach; ?>
+					<?php endforeach; ?>
+
 				</ul>
-				</p>
 
 			</div>
 		</div>

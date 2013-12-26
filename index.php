@@ -15,12 +15,126 @@ $app = new \Slim\Slim(array(
 $app->get('/', function () use ($app, $config) {
 
 	$app->render('main.php', array(
+		'skills' => $app->fetch_skills,
 		'repos' => $app->fetch_repos,
 		'designs' => $app->fetch_designs,
 		//'timeline' => $app->fetch_timeline,
 		'config' => $config,
 	));
 });
+
+// Skills
+$app->fetch_skills = function() {
+	$skills = array(
+		'Frontend' => array(
+			array(
+				'title' => 'HTML5',
+				'url' => 'http://en.wikipedia.org/wiki/HTML5',
+				),
+			array(
+				'title' => 'CSS3',
+				'url' => 'http://en.wikipedia.org/wiki/Cascading_Style_Sheets',
+				),
+			array(
+				'title' => 'jQuery',
+				'url' => 'http://jquery.com',
+				),
+			array(
+				'title' => 'Javascript',
+				'url' => 'http://en.wikipedia.org/wiki/Javascript',
+				),
+			array(
+				'title' => 'KnockoutJs',
+				'url' => 'http://knockoutjs.com',
+				),
+			array(
+				'title' => 'Grunt',
+				'url' => 'http://gruntjs.com/',
+				),
+			array(
+				'title' => 'Bower',
+				'url' => 'http://bower.io',
+				),
+			array(
+				'title' => 'Bootstrap 2/3',
+				'url' => 'http://getbootstrap.com',
+				),
+			),
+		'Backend' => array(
+			array(
+				'title' => 'PHP',
+				'url' => 'http://php.net',
+				),
+			array(
+				'title' => 'CakePHP',
+				'url' => 'http://cakephp.org',
+				),
+			array(
+				'title' => 'Slim Framework',
+				'url' => 'http://www.slimframework.com/',
+				),
+			array(
+				'title' => 'MySQL',
+				'url' => 'http://mysql.com',
+				),
+			array(
+				'title' => 'Composer',
+				'url' => 'http://getcomposer.org',
+				),
+			),
+		'Design & Concept' => array(
+			array(
+				'title' => 'Photoshop',
+				'url' => 'http://www.photoshop.com',
+				),
+			array(
+				'title' => 'Pen & Paper',
+				'url' => 'http://alistapart.com/article/paperprototyping',
+				),
+			array(
+				'title' => 'Balsamiq mockups',
+				'url' => 'http://balsamiq.com/',
+				),
+			array(
+				'title' => 'FramerJS',
+				'url' => 'http://framerjs.com',
+				),
+			array(
+				'title' => 'SketchApp',
+				'url' => 'http://www.bohemiancoding.com/sketch/',
+				),
+			),
+		'Methodologies & Tools' => array(
+			array(
+				'title' => 'Agile / Kanban',
+				'url' => 'http://en.wikipedia.org/wiki/Agile_software_development',
+				),
+			array(
+				'title' => 'MVC',
+				'url' => 'http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller',
+				),
+			array(
+				'title' => 'DRY',
+				'url' => "http://en.wikipedia.org/wiki/Don't_repeat_yourself",
+				),
+			array(
+				'title' => "RESTful API's",
+				'url' => 'http://en.wikipedia.org/wiki/Representational_state_transfer',
+				),
+			array(
+				'title' => 'Github',
+				'url' => 'http://github.com',
+				),
+			array(
+				'title' => 'Sublime Text',
+				'url' => 'http://www.sublimetext.com/',
+				),
+			),
+
+		);
+
+	return $skills;
+};
 
 // Designs/portfolio
 $app->fetch_designs = function() {
