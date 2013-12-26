@@ -122,6 +122,12 @@ ul {
 	@column-count: 4;
 	@column-gap: 20px;
 	.content-columns(@column-count; @column-gap: @grid-gutter-width);
+
+	h5 {
+		margin-bottom: 0;
+		margin-top: (@line-height-computed / 2);
+	}
+
 }
 
 @media (max-width: @screen-md-min) {
