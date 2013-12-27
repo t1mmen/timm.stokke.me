@@ -25,7 +25,9 @@
 				I've been passionately building websites, services and apps for web & mobile devices since 1997.
 			</p>
 
-			<a href="#contact" class="btn btn-success">Let's talk</a>
+			<p>
+				<a href="#contact" class="btn btn-success">Let's talk</a>
+			</p>
 
 
 		</div>
@@ -40,7 +42,7 @@
  * SKILLS OVERVIEW
  * ****************************************************************** */
  ?>
-<section class="outlined" id="ido">
+<section id="ido">
 <div class="container">
 
 	<div class="page-header">
@@ -94,41 +96,6 @@
 				I work on the LAMP stack. CakePHP has been my go-to framework the last 5 years.
 			</p>
 
-		</div>
-
-		<div class="col-md-12">
-			<a href="#buzzwords" data-target=".buzzwords" class="js-expand btn btn-primary btn-sm">Tell me more...</a>
-
-			<div id="buzzwords" class="buzzwords animated hide">
-
-				<div class="page-header">
-					<h1>I know...</h1>
-				</div>
-
-
-				<p>
-					This should give you a general idea of what I'm familiar with when it comes to technologies, tools and methodologies.
-					Check out <a href="http://www.linkedin.com/in/timmstokke" target="_blank">my skills & expertise on LinkedIn</a>,
-					browse my <a href="http://github.com/t1mmen">Github profile</a> or <a href="#contact">get in touch</a> if you need to know
-					more about my skillset. In keyword form:
-				</p>
-
-				<ul class="columns">
-
-					<?php foreach ($this->data->skills as $skillGroup => $skillSet) : ?>
-
-						<li><h5><?php echo $skillGroup; ?></h5></li>
-
-						<?php foreach ($skillSet as $skill) : ?>
-						<li>
-							<a href="<?php echo $skill['url']; ?>" target="_blank"><?php echo $skill['title']; ?></a>
-						</li>
-						<?php endforeach; ?>
-					<?php endforeach; ?>
-
-				</ul>
-
-			</div>
 		</div>
 	</div>
 </div>
@@ -212,7 +179,7 @@ if (isset($this->data->designs)) :
 if (isset($this->data->repos)) :
 ?>
 
-<section id="github">
+<section id="github" class="brand-primary">
 <div class="container">
 
 
@@ -284,7 +251,7 @@ if (isset($this->data->repos)) :
 if (isset($this->data->jobs)) :
  ?>
 
-<section id="employment-history" class="green">
+<section id="employment-history">
 <div class="container">
 
 	<div class="page-header">
@@ -293,7 +260,6 @@ if (isset($this->data->jobs)) :
 
 	<div class="row">
 		<?php foreach ($this->data->jobs as $job) : ?>
-
 
 			<div class="col-md-4 col-sm-4 col-xs-6">
 				<h4>
@@ -305,12 +271,52 @@ if (isset($this->data->jobs)) :
 			</div>
 
 		<?php endforeach; ?>
-
-		<div class="col-md-12">
-			<a href="http://www.linkedin.com/in/timmstokke" target="_blank" class="btn btn-primary btn-sm">Learn more on LinkedIn</a>
-		</div>
 	</div>
 
+
+	<a href="http://www.linkedin.com/in/timmstokke" target="_blank" class="btn btn-primary btn-sm">Learn more on LinkedIn</a>
+	&nbsp;
+	<a href="#buzzwords" data-target=".buzzwords" class="js-expand btn btn-success btn-sm" data-toggle="false">
+		view my skills
+	</a>
+
+</div>
+</section>
+
+<section id="skills" class="blue">
+<div class="container">
+
+	<div class="row">
+
+		<div class="col-md-12">
+
+			<div id="buzzwords" class="buzzwords animated hide">
+
+				<div class="page-header">
+					<h1>SKILLS</h1>
+				</div>
+
+				<ul class="columns">
+
+					<?php foreach ($this->data->skills as $skillGroup => $skillSet) : ?>
+
+						<li><h5><?php echo $skillGroup; ?></h5></li>
+
+						<?php foreach ($skillSet as $skill) : ?>
+						<li>
+							<a href="<?php echo $skill['url']; ?>" target="_blank"><?php echo $skill['title']; ?></a>
+							<?php if (isset($skill['votes']) && $skill['votes'] > 0) :?>
+								<abbr title="LinkedIn recommentations for this particular skill" class="badge badge-info">+<?php echo $skill['votes']; ?></abbr>
+							<?php endif; ?>
+						</li>
+						<?php endforeach; ?>
+					<?php endforeach; ?>
+
+				</ul>
+			</div>
+		</div>
+
+	</div>
 </div>
 </section>
 <?php endif; ?>
@@ -326,7 +332,7 @@ if (isset($this->data->timeline)) :
 <div class="container">
 
 	<div class="page-header">
-		<h1>Timeline</h1>
+		<h1>Highlights</h1>
 	</div>
 
 
@@ -334,15 +340,49 @@ if (isset($this->data->timeline)) :
 		<div class="col-md-12">
 
 			<ul class="timeline">
-			<?php foreach ($this->data->timeline as $timeline) : ?>
-				<li>
-					<small><?php echo $timeline['year']; ?></small>
-					<h6><?php echo $timeline['title']; ?></h6>
-					<p><?php echo $timeline['description']; ?></p>
+			<?php
+			foreach ($this->data->timeline as $key => $timeline) :
+				$class = 'timeline-node animated invisible';
+
+				if (isset($timeline['type'])) {
+					$class .= ' timeline-node-'.$timeline['type'];
+				}
+
+				if (isset($timeline['extendedDescription'])) {
+					$class .= ' has-extended-body';
+				}
+
+				if (isset($timeline['type']) && $timeline['type'] == 'personal') {
+					$class .= ' hide';
+				}
+			?>
+
+				<li class="<?php echo $class; ?> js-expand" data-target=".extended-body-<?php echo $key; ?>" data-toggle="true" data-hide-trigger="false" data-animation-in="flipInX" data-animation-out="flipOutX" >
+
+					<div class="date"><?php echo $timeline['year']; ?></div>
+
+					<div class="body">
+						<div class="connector"></div>
+						<h5><?php echo $timeline['title']; ?></h5>
+						<?php if (isset($timeline['description'])) : ?>
+							<p><?php echo $timeline['description']; ?></p>
+						<?php endif; ?>
+					</div>
+
+					<?php  if (isset($timeline['extendedDescription'])) : ?>
+						<div class="extended-body extended-body-<?php echo $key; ?> animated hide">
+							<div>
+							<?php echo $timeline['extendedDescription'];  ?>
+							</div>
+						</div>
+					<?php endif; ?>
+
 				</li>
 
 			<?php endforeach; ?>
 			</ul>
+
+			<a href="#timeline" data-target=".timeline-node-personal" class="js-expand btn btn-success btn-sm" data-animation-in="flipInX">Show personal highlights, too.</a>
 		</div>
 	</div>
 

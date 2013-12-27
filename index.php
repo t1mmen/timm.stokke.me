@@ -19,7 +19,7 @@ $app->get('/', function () use ($app, $config) {
 		'repos' => $app->fetch_repos,
 		'designs' => $app->fetch_designs,
 		'jobs' => $app->fetch_jobs,
-		//'timeline' => $app->fetch_timeline,
+		'timeline' => $app->fetch_timeline,
 		'config' => $config,
 	));
 });
@@ -61,6 +61,7 @@ $app->fetch_skills = function() {
 			array(
 				'title' => 'HTML5',
 				'url' => 'http://en.wikipedia.org/wiki/HTML5',
+				'votes' => 9,
 				),
 			array(
 				'title' => 'CSS3',
@@ -75,11 +76,7 @@ $app->fetch_skills = function() {
 				'url' => 'http://en.wikipedia.org/wiki/Javascript',
 				),
 			array(
-				'title' => 'KnockoutJs',
-				'url' => 'http://knockoutjs.com',
-				),
-			array(
-				'title' => 'Bootstrap 2/3',
+				'title' => 'Bootstrap 2 & 3',
 				'url' => 'http://getbootstrap.com',
 				),
 			),
@@ -123,10 +120,18 @@ $app->fetch_skills = function() {
 				'url' => 'http://www.bohemiancoding.com/sketch/',
 				),
 			),
-		'Methodologies & Tools' => array(
+		'Methodologies & Concepts' => array(
 			array(
 				'title' => 'Agile / Kanban',
 				'url' => 'http://en.wikipedia.org/wiki/Agile_software_development',
+				),
+			array(
+				'title' => 'Mobile first',
+				'url' => null,
+				),
+			array(
+				'title' => 'API design',
+				'url' => null,
 				),
 			array(
 				'title' => 'MVC',
@@ -140,6 +145,9 @@ $app->fetch_skills = function() {
 				'title' => "RESTful API's",
 				'url' => 'http://en.wikipedia.org/wiki/Representational_state_transfer',
 				),
+			),
+		'Tools' => array(
+
 			array(
 				'title' => 'Composer',
 				'url' => 'http://getcomposer.org',
@@ -153,12 +161,42 @@ $app->fetch_skills = function() {
 				'url' => 'http://bower.io',
 				),
 			array(
-				'title' => 'Github',
+				'title' => 'Git',
 				'url' => 'http://github.com',
 				),
 			array(
 				'title' => 'Sublime Text',
 				'url' => 'http://www.sublimetext.com/',
+				),
+			),
+		'Services' => array(
+			array(
+				'title' => 'Basecamp',
+				'url' => null,
+				),
+			array(
+				'title' => 'Hipchat',
+				'url' => null,
+				),
+			array(
+				'title' => 'Leankit',
+				'url' => null,
+				),
+			array(
+				'title' => 'Sprint.ly',
+				'url' => null,
+				),
+			array(
+				'title' => 'Trello',
+				'url' => null,
+				),
+			array(
+				'title' => 'Trello',
+				'url' => null,
+				),
+			array(
+				'title' => 'Github',
+				'url' => 'http://github.com',
 				),
 			),
 
@@ -282,34 +320,58 @@ $app->fetch_repos = function () {
 $app->fetch_timeline = function () {
 	$timeline = array(
 		array(
+			'title' => 'Became a huge nerd',
+			'year' => 1995,
+			'description' => "Fell in love with computers. At first, games caught my attention. By '97, I was running my first gaming website.",
+			'type' => 'personal',
+			),
+		array(
 			'title' => 'Joined my first startup',
 			'year' => 2001,
 			'description' => 'Hired by my former teacher, bootstrapped.',
+			//'extendedDescription' => 'The dotcom bubble burst, so I might as well jump in with both feet. I knew what my dream was, and I went for it.',
 			),
 		array(
 			'title' => 'Shipped 2net Publish',
 			'year' => 2004,
-			'description' => 'My first major SaaS launch.',
+			'description' => "My first major SaaS launch, this content management system is still in use by several major websites today.",
+			),
+		array(
+			'title' => 'Played the World Series of Poker',
+			'year' => 2006,
+			'description' => "Busting out with aces vs jacks was rough, but what an experience! These days, I don't play much outside of a homegame or two a year.",
+			'type' => 'personal',
 			),
 		array(
 			'title' => 'Aquihired',
 			'year' => 2007,
-			'description' => 'Colours bought Aspekt.',
+			'description' => 'Colours bought Aspekt',
+			'type' => 'jobchange',
+			),
+		array(
+			'title' => 'Met the most beautiful girl in the world',
+			'year' => 2008,
+			'description' => 'To this day, she continues to impress me with her awesomeness! <i class="fa fa-heart"></i>',
+			'type' => 'personal',
 			),
 		array(
 			'title' => 'Designed apartment blueprints',
 			'year' => 2009,
-			'description' => '>Designing living spaces proved a fun challenge.',
+			'description' => 'Designing living spaces proved a fun challenge.',
 			),
 		array(
-			'title' => 'Shipped BT Sprek',
+			'title' => 'Release my first jQuery plugin',
 			'year' => 2012,
-			'description' => false,
+			),
+		array(
+			'title' => 'Got a dog!',
+			'year' => 2012,
+			'description' => 'The most glorious boston terrier became ours.',
+			'type' => 'personal',
 			),
 		array(
 			'title' => 'Moving to Canada',
 			'year' => 2014,
-			'description' => false,
 			),
 		);
 	return $timeline;
