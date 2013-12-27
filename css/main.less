@@ -86,6 +86,8 @@ body {
 }
 
 
+// Type ====================================================================
+
 h1,h2,h3,h4,h5,h6 {
 	color: @gray-dark;
 	margin-top: 0;
@@ -101,21 +103,32 @@ section, footer {
 	background: #fff;
 }
 
-section.brand-primary {
-	@base-section-color: @brand-primary;
-	border: 1px solid lighten(@base-section-color, 25%);
-	border-left-width: 0;
-	border-right-width: 0;
-	background: lighten(@base-section-color, 35%);
 
-	h1,h2,h3,h4,h5,h6,p {
-	color: darken(@base-section-color, 40%);
-	text-shadow: 0px 1px 1px lighten(@base-section-color, 30%);
+.page-header {
+	margin-top: 0;
+}
+
+
+section:not(.hide),
+footer:not(.hide) {
+
+	&:nth-of-type(2n) {
+		@base-section-color: @brand-primary;
+		border: 1px solid lighten(@base-section-color, 25%);
+		border-left-width: 0;
+		border-right-width: 0;
+		background: lighten(@base-section-color, 35%);
+
+		h1,h2,h3,h4,h5,h6,p {
+		color: darken(@base-section-color, 40%);
+		text-shadow: 0px 1px 0px #fff;
+		}
+
+		.page-header {
+			border-bottom-color: lighten(@base-section-color, 30%);
+		}
 	}
 
-	.page-header {
-		border-bottom-color: lighten(@base-section-color, 30%);
-	}
 }
 
 

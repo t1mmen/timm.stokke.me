@@ -6,29 +6,28 @@
 	border-left: 5px solid @brand-info;
 	margin-left: 25px;
 	position: relative;
+	margin-bottom: @grid-gutter-width;
 
 	li {
 		.clearfix();
 		list-style: none;
 		display: block;
-		margin-bottom: @grid-gutter-width;
+		margin-bottom: @grid-gutter-width/4;
+
 	}
 
 	.body {
 		z-index: 2;
 		position: relative;
 		margin: 0 0 0 @grid-gutter-width*2;
-		padding: @padding-base-horizontal;
+		padding: @padding-base-horizontal @padding-base-horizontal 0 @padding-base-horizontal;
 		background-color: @gray-lighter;
 		border: 1px solid @gray-light;
 		border-bottom-color: @btn-info-border;
 		border-bottom-width: 3px;
 		border-radius: @border-radius-base;
-		max-width: 50%;
+		max-width: 40%;
 
-		p:last-of-type {
-			margin: 0;
-		}
 	}
 
 	// Personal accent
@@ -78,7 +77,7 @@
 	.connector {
 		z-index: 1;
 		left: -@grid-gutter-width*2;
-		top: 22px;
+		top: 25px;
 		width: @grid-gutter-width*2;
 		position: absolute;
 		display: block;
@@ -128,14 +127,16 @@
 	.date {
 		z-index: 3;
 		position: absolute;
-		left: -25px;
-		.size(50px, 50px);
-		padding-top: 12px;
+		left: -30px;
+		.size(57px, 57px);
+		padding-top: 13px;
 		text-align: center;
 		background-color: @btn-info-bg;
 		border-radius: 50px;
 		border: 1px solid @btn-info-border;
+		text-shadow: 0px 1px 0px @btn-info-border;
 		border-bottom-width: 3px;
+		font-size: @font-size-h4;
 		color: #fff;
 	}
 
@@ -146,7 +147,7 @@
 @media (min-width: @screen-sm-min) {
 	.timeline {
 
-		li:nth-child(2n) {
+		li:nth-child(even) {
 
 			.extended-body,
 			.body {
@@ -154,35 +155,23 @@
 			}
 
 			.connector {
-				left: -100%;
-				width: 100%;
+				left: -125%;
+				width: 125%;
 			}
 		}
 
-		li:nth-child(3n) {
+		li:nth-child(odd) {
 			.extended-body,
 			.body {
-				margin-left: 15%;
+				margin-left: 5%;
 			}
 
 			.connector {
-				left: -40%;
-				width: 40%;
+				left: -15%;
+				width: 15%;
 			}
 		}
 
-		li:nth-child(3n) {
-
-			.extended-body,
-			.body {
-				margin-left: 25%;
-			}
-
-			.connector {
-				left: -50%;
-				width: 50%;
-			}
-		}
 
 	}
 }

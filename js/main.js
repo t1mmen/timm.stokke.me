@@ -101,7 +101,7 @@ $(document).ready(function() {
 
 		// http://stackoverflow.com/questions/19597735/animate-each-child-jquery
 		$('.timeline-node').not('.hide').each(function(i) {
-			delay =(i)*500;
+			delay =(i)*200;
 			setTimeout(function (div) {
 				div.show().addClass('animated flipInX').removeClass('invisible');
 			}, delay, $(this));

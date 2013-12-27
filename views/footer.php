@@ -3,7 +3,7 @@
  * CONTACT/FOOTER
  * ****************************************************************** */
  ?>
-<footer id="contact">
+<section id="contact">
 <div class="container">
 
 	<div class="page-header">
@@ -45,7 +45,7 @@
 	</div>
 
 </div>
-</footer>
+</section>
 
 <p class="text-center" style="padding-top: 50px;">
 	Want a look behind the curtain? <br>

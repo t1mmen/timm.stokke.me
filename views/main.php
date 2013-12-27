@@ -283,14 +283,12 @@ if (isset($this->data->jobs)) :
 </div>
 </section>
 
-<section id="skills" class="blue">
+<section id="buzzwords" class="buzzwords animated hide">
 <div class="container">
 
 	<div class="row">
 
 		<div class="col-md-12">
-
-			<div id="buzzwords" class="buzzwords animated hide">
 
 				<div class="page-header">
 					<h1>SKILLS</h1>
@@ -313,7 +311,7 @@ if (isset($this->data->jobs)) :
 					<?php endforeach; ?>
 
 				</ul>
-			</div>
+
 		</div>
 
 	</div>
@@ -359,11 +357,14 @@ if (isset($this->data->timeline)) :
 
 				<li class="<?php echo $class; ?> js-expand" data-target=".extended-body-<?php echo $key; ?>" data-toggle="true" data-hide-trigger="false" data-animation-in="flipInX" data-animation-out="flipOutX" >
 
-					<div class="date"><?php echo $timeline['year']; ?></div>
+					<div class="date">'<?php echo substr($timeline['year'], 2, 2); ?></div>
 
 					<div class="body">
 						<div class="connector"></div>
-						<h5><?php echo $timeline['title']; ?></h5>
+						<h5>
+							<?php echo $timeline['title']; ?>
+							<small><?php echo $timeline['year']; ?></small>
+						</h5>
 						<?php if (isset($timeline['description'])) : ?>
 							<p><?php echo $timeline['description']; ?></p>
 						<?php endif; ?>

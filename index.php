@@ -339,10 +339,15 @@ $app->fetch_timeline = function () {
 			'type' => 'personal',
 			),
 		array(
+			'title' => 'Graduated from IT-Akademiet',
+			'year' => 2002,
+			'type' => 'jobchange',
+			),
+		array(
 			'title' => 'Joined my first startup',
-			'year' => 2001,
+			'year' => 2002,
 			'description' => 'Hired by my former teacher, bootstrapped.',
-			//'extendedDescription' => 'The dotcom bubble burst, so I might as well jump in with both feet. I knew what my dream was, and I went for it.',
+			'type' => 'jobchange',
 			),
 		array(
 			'title' => 'Shipped 2net Publish',
