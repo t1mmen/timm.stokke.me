@@ -31,7 +31,7 @@
 //@import "../bower_components/bootstrap/less/pagination.less";
 //@import "../bower_components/bootstrap/less/pager.less";
 @import "../bower_components/bootstrap/less/labels.less";
-//@import "../bower_components/bootstrap/less/badges.less";
+@import "../bower_components/bootstrap/less/badges.less";
 //@import "../bower_components/bootstrap/less/jumbotron.less";
 //@import "../bower_components/bootstrap/less/thumbnails.less";
 //@import "../bower_components/bootstrap/less/alerts.less";
@@ -66,6 +66,7 @@
 @import "assets/owl.carousel.less";
 @import "assets/owl.theme.less";
 
+@import "assets/timeline.less";
 
 /*
  * MY OVERWRITES
@@ -100,6 +101,24 @@ section, footer {
 	background: #fff;
 }
 
+section.brand-primary {
+	@base-section-color: @brand-primary;
+	border: 1px solid lighten(@base-section-color, 25%);
+	border-left-width: 0;
+	border-right-width: 0;
+	background: lighten(@base-section-color, 35%);
+
+	h1,h2,h3,h4,h5,h6,p {
+	color: darken(@base-section-color, 40%);
+	text-shadow: 0px 1px 1px lighten(@base-section-color, 30%);
+	}
+
+	.page-header {
+		border-bottom-color: lighten(@base-section-color, 30%);
+	}
+}
+
+
 footer {
 	border-bottom: 1px solid @gray-light;
 }
@@ -123,9 +142,8 @@ ul {
 	@column-gap: 20px;
 	.content-columns(@column-count; @column-gap: @grid-gutter-width);
 
-	h5 {
-		margin-bottom: 0;
-		margin-top: (@line-height-computed / 2);
+	li {
+		margin-bottom: (@line-height-computed / 3);
 	}
 
 }
