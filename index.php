@@ -14,7 +14,9 @@ $app = new \Slim\Slim(array(
 // Main route:
 $app->get('/', function () use ($app, $config) {
 
+
 	$app->render('main.php', array(
+		'devEnviroment' => $app->get_env,
 		'skills' => $app->fetch_skills,
 		'repos' => $app->fetch_repos,
 		'designs' => $app->fetch_designs,
@@ -25,6 +27,17 @@ $app->get('/', function () use ($app, $config) {
 });
 
 
+// Enviroment check:
+$app->get_env = function() {
+
+ 	$enviroment = 'live';
+
+	if ($_SERVER['HTTP_HOST'] === 'localhost') {
+		$enviroment = 'dev';
+	}
+
+	return $enviroment;
+};
 
 // Jobs
 $app->fetch_jobs = function() {
