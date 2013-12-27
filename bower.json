@@ -6,7 +6,8 @@
     "bootstrap": "~3",
     "font-awesome": "~4",
     "animate.css": "~3",
-    "owlcarousel":"~1.3"
+    "owlcarousel":"~1.3",
+    "jquery-waypoints":"~2"
   },
   "devDependencies": {}
 }

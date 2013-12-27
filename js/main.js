@@ -10,21 +10,61 @@ $(document).ready(function() {
 	}, 1000);
 
 
-	// Generic "show selector" style snippet
+	// Generic "show element" style snippet
 	$('.js-expand').click(function(e){
 
 		e.preventDefault();
 
 		var $this = $(this),
-			$target = $($this.data('target')),
-			targetAnimationIn = 'slideInLeft',
-			btnAnimationOut = 'slideOutRight';
+			data = $this.data(),
+			$target = $(data.target),
+			targetAnimationIn = data.animationIn,
+			targetAnimationOut = data.animationOut,
+			btnAnimationOut = data.btnAnimationOut,
+			hideTriggerAfterClick = data.hideTrigger,
+			toggle = data.toggle;
 
-		$target.removeClass('hide').addClass(targetAnimationIn);
+		if (targetAnimationIn === undefined) {
+			targetAnimationIn = 'slideInLeft';
+		}
 
-		$this.addClass('animated ' + btnAnimationOut);
+		if (targetAnimationOut === undefined) {
+			targetAnimationOut = 'slideOutLeft';
+		}
+
+		if (btnAnimationOut === undefined) {
+			btnAnimationOut = 'flipOutX';
+		}
+
+		if (hideTriggerAfterClick === undefined) {
+			hideTriggerAfterClick = true;
+		}
+
+		if (toggle === undefined) {
+			toggle = true;
+		}
+
+		if ($target.hasClass(targetAnimationIn) && toggle == true) {
+
+			$target.removeClass(targetAnimationIn).addClass(targetAnimationOut);
+
+			$target.one('webkitAnimationEnd mozAnimationEnd oAnimationEnd animationEnd', function() {
+				$target.addClass('hide invisible');
+			});
+
+		} else {
+
+			$target.removeClass('hide invisible').removeClass(targetAnimationOut).addClass(targetAnimationIn);
+
+		}
+
+		if (hideTriggerAfterClick != false) {
+			$this.addClass('animated ' + btnAnimationOut);
+		}
 
 	});
+
+
 
 	// Carousel:
 	$('.owl-carousel').owlCarousel({
@@ -47,6 +87,26 @@ $(document).ready(function() {
 		}
 	});
 
+	// Animate timeline
+	// Delay animations on history timeline
+	$('#timeline').waypoint({
+		//horizontal: true,
+  		offset: '70%',
+		handler: animateTimelineNodes
+	});
 
+
+	// Loop though timeline nodes and animate them after delay
+	function animateTimelineNodes(selector) {
+
+		// http://stackoverflow.com/questions/19597735/animate-each-child-jquery
+		$('.timeline-node').not('.hide').each(function(i) {
+			delay =(i)*500;
+			setTimeout(function (div) {
+				div.show().addClass('animated flipInX').removeClass('invisible');
+			}, delay, $(this));
+		});
+
+	};
 
 });
