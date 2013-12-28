@@ -221,6 +221,25 @@ $app->fetch_skills = function() {
 // Designs/portfolio
 $app->fetch_designs = function() {
 	$designs = array(
+		// ColoursCMS
+		array(
+			'media' => array(
+				'img/projects/ccms1.jpg',
+				'img/projects/ccms2.jpg',
+				'img/projects/ccms3.jpg',
+				),
+			'client' => 'Colours',
+			'project_name' => 'ColoursCMS',
+			'url' => 'http://www.colourscms.no',
+			'description' => "
+				<p>
+					ColoursCMS is a beautifully simple and powerful content management system, build on CakePHP.
+				</p>
+				<p>
+					I worked on concepts, spec, UI & UX, frontend and backend development
+					in the 2010–2013 timeframe.
+				</p>",
+			),
 		// SPREK
 		array(
 			'media' => array(
@@ -249,18 +268,30 @@ $app->fetch_designs = function() {
 		array(
 			'media' => array(
 				'img/projects/gcrieber1.jpg',
+				'img/projects/gcrieber3.jpg',
+				'img/projects/gcrieber2.jpg',
 				),
-			'client' => 'GCRieber Eiendom',
+			'client' => 'GCRieber',
 			'project_name' => 'Responsive redesign',
 			'url' => 'http://www.gcrieber-eiendom.no',
 			'description' => '
 				<p>
 					GC Rieber Eiendom developes and operates several properties in Bergen, Norway.
-				</p>
-
-				<p>
 					Designed in collaberation with <a href="https://twitter.com/IvarBorthen81" target="_blank"> @IvarBorthen81</a>.
 				</p>',
+			),
+		// RGROUP
+		array(
+			'media' => array(
+				'img/projects/rgroup.jpg',
+				),
+			'client' => 'Randaberg Group',
+			'project_name' => 'Responsive redesign',
+			'url' => 'http://www.rgroup.no',
+			'description' => "
+				<p>
+					Randaberg Group offers a wide array of products and services in steel production and protection for subsea and storage
+				</p>",
 			),
 		);
 

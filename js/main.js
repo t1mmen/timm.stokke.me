@@ -68,7 +68,8 @@ $(document).ready(function() {
 
 	// Carousel:
 	$('.owl-carousel').owlCarousel({
-		singleItem:true
+		singleItem:true,
+		lazyLoad : true
 	});
 
 

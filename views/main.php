@@ -136,7 +136,7 @@ if (isset($this->data->designs)) :
 					<div class="owl-carousel">
 					<?php
 					foreach ($design['media'] as $media) {
-						echo "<div><img src='$media' data-src='$media' class='lazyOwl'></div>";
+						echo "<div><img data-src='$media' class='lazyOwl'></div>";
 					}
 					 ?>
 					</div>
