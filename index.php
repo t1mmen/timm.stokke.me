@@ -231,6 +231,7 @@ $app->fetch_designs = function() {
 			'client' => 'Colours',
 			'project_name' => 'ColoursCMS',
 			'url' => 'http://www.colourscms.no',
+			'tease' => 'ColoursCMS is a beautifully simple and powerful content management system',
 			'description' => "
 				<p>
 					ColoursCMS is a beautifully simple and powerful content management system, build on CakePHP.
@@ -248,7 +249,9 @@ $app->fetch_designs = function() {
 				),
 			'client' => 'Bergens Tidende',
 			'project_name' => 'Sprek',
+			'skills' => array('UI', 'UX', 'Frontend', 'Backend', 'Concept', 'Business'),
 			'url' => 'http://tur.bt.no',
+			'tease' => 'A service for finding and taking hikes.',
 			'description' => '
 				<p>
 					BT Sprek is a service for finding and taking hikes in and
@@ -274,6 +277,7 @@ $app->fetch_designs = function() {
 			'client' => 'GCRieber',
 			'project_name' => 'Responsive redesign',
 			'url' => 'http://www.gcrieber-eiendom.no',
+			'tease' => 'Landowner and properties holder in Bergen, Norway.',
 			'description' => '
 				<p>
 					GC Rieber Eiendom developes and operates several properties in Bergen, Norway.
@@ -409,7 +413,8 @@ $app->fetch_timeline = function () {
 			'description' => 'Designing living spaces proved a fun challenge.',
 			),
 		array(
-			'title' => 'Release my first jQuery plugin',
+			'title' => 'Released my first jQuery plugin',
+			'url' => 'https://github.com/t1mmen/jquery-handleform',
 			'year' => 2012,
 			),
 		array(

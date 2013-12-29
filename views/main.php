@@ -112,18 +112,20 @@ if (isset($this->data->designs)) :
 <section id="designs">
 <div class="container">
 
-	<div class="page-header">
-		<h1>Some of my designs</h1>
-	</div>
+	<h1>Some of my work</h1>
 
 
 	<div class="row">
-		<?php foreach ($this->data->designs as $design) : ?>
+		<?php
+		$counter=0;
+		foreach ($this->data->designs as $design) :
+			$counter++;
+		?>
 
 		<div class="col-md-6 col-sm-6 col-xs-12">
 
 			<div class="browser">
-				<div class="chrome">
+				<div class="chrome animated invisible flipOutX">
 					<div class="buttons">
 						<div class="exit"></div>
 						<div class="minimize"></div>
@@ -134,35 +136,52 @@ if (isset($this->data->designs)) :
 				<div class="viewport">
 
 					<div class="owl-carousel">
-					<?php
-					foreach ($design['media'] as $media) {
-						echo "<div><img data-src='$media' class='lazyOwl'></div>";
-					}
-					 ?>
+						<div class="cover" data-show-chrome="off">
+							<h3>
+								<small><?php echo $design['client']; ?></small><br>
+								<a href="<?php echo $design['url']; ?>"><?php echo $design['project_name']; ?></a>
+							</h3>
+
+							<?php if (isset($design['tease'])) : ?>
+								<p class="lead"><?php echo $design['tease']; ?></p>
+							<?php endif; ?>
+
+							<span class="next-slide btn btn-default btn-sm">see screenshots</span>
+						</div>
+
+						<?php
+						foreach ($design['media'] as $media) {
+							echo "<div data-show-chrome=\"on\"><img data-src='$media' class='lazyOwl'></div>";
+						}
+						 ?>
+
+						<div class="cover" data-show-chrome="off">
+
+							<h4>
+								<small><?php echo $design['client']; ?></small><br>
+								<a href="<?php echo $design['url']; ?>"><?php echo $design['project_name']; ?></a>
+							</h4>
+
+							<p><?php echo $design['description']; ?></p>
+
+							<a href="<?php echo $design['url']; ?>" target="_blank" class="btn btn-default btn-sm">visit</a>
+
+						</div>
+
 					</div>
 
 				</div>
 			</div>
 
-			<h4 class="pull-right text-right">
-				<small>client</small><br>
-				<?php echo $design['client']; ?>
-			</h4>
-
-			<h4>
-				<small>project</small><br>
-				<?php echo $design['project_name']; ?>
-			</h4>
-
-			<?php echo $design['description']; ?>
-
-			<p>
-			<a href="<?php echo $design['url']; ?>" target="_blank" class="btn btn-primary btn-sm">visit</a>
-			</p>
-
 		</div>
 
-		<?php endforeach; ?>
+		<?php
+		if ($counter==2) {
+			$counter=0;
+			echo '<div class="clearfix"></div>';
+		}
+		endforeach;
+		?>
 	</div>
 
 

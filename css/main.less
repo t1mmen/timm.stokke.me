@@ -87,6 +87,45 @@ body {
 }
 
 
+
+// OwlCarousel ====================================================================
+
+.owl-item img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+
+.owl-item .cover {
+	padding: 20px;
+	color: #fff;
+	background-color: @brand-info;
+	border-radius: @border-radius-large;
+
+	h4, p {
+		color: #fff;
+	}
+
+	small {
+		color: lighten(@brand-info, 20%);
+	}
+
+	a:not(.btn) {
+		color: darken(@brand-info, 30%);
+	}
+}
+
+.owl-carousel {
+
+	:nth-of-type(even) {
+		 .owl-item .cover {
+			background-color: @brand-warning;
+		}
+
+	}
+}
+
 // Type ====================================================================
 
 h1,h2,h3,h4,h5,h6 {
@@ -110,19 +149,28 @@ section, footer {
 }
 
 
-section:not(.hide),
-footer:not(.hide) {
+section,
+footer {
 
 	&:nth-of-type(2n) {
-		@base-section-color: @brand-primary;
+		@base-section-color: @brand-info;
 		border: 1px solid lighten(@base-section-color, 25%);
 		border-left-width: 0;
 		border-right-width: 0;
 		background: lighten(@base-section-color, 35%);
 
 		h1,h2,h3,h4,h5,h6,p {
-			color: darken(@base-section-color, 40%);
+			color: darken(@base-section-color, 20%);
 			text-shadow: 0px 1px 0px #fff;
+		}
+
+		a:not(.btn) {
+			color: darken(@base-section-color, 30%);
+			text-shadow: 0px 1px 0px #fff;
+		}
+
+		.text-muted {
+			color: lighten(@base-section-color, 20%);
 		}
 
 		.page-header {
@@ -178,7 +226,7 @@ ul {
 
 // Browser
 
-@browser-bg: #ccc;
+@browser-bg: #fff;
 @browser-border: #777;
 
 .browser {
@@ -189,6 +237,7 @@ ul {
 		padding: 7px;
 		.border-top-radius(5px);
 		.clearfix();
+			background: @gray-light;
 
 		.address-bar {
 			margin-left: 61px;
@@ -251,7 +300,7 @@ ul {
 		img {
 			display: block;
 			max-width: 100%;
-			border: 7px solid @browser-bg;
+			border: 7px solid @gray-light;
 			border-top-width: 0;
 			.border-bottom-radius(5px);
 		}

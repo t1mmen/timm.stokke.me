@@ -67,11 +67,39 @@ $(document).ready(function() {
 
 
 	// Carousel:
-	$('.owl-carousel').owlCarousel({
+	$(".owl-carousel").owlCarousel({
 		singleItem:true,
-		lazyLoad : true
+		lazyLoad : true,
+		autoHeight : true,
+		addClassActive : true,
+		afterMove : toggleBrowserChrome
 	});
 
+	function toggleBrowserChrome(elem) {
+
+		var $this = $(elem),
+			$activeSlide = $this.find('.active'),
+			$cover = $activeSlide.find('.cover'),
+			$chrome = $this.parents('.browser').find('.chrome');
+			showChrome = $activeSlide.find('div').data('showChrome');
+
+			$chrome.removeClass('invisible');
+
+			if (showChrome == 'on') {
+				$chrome.removeClass('flipOutX').addClass('flipInX');
+			} else {
+				$chrome.addClass('flipOutX').removeClass('flipInX');
+			}
+	}
+
+	// Custom Navigation Events
+	$(".next-slide").click(function(){
+
+		var $this = $(this),
+			$owl = $this.parents('.owl-carousel');
+
+		$owl.trigger('owl.next');
+	})
 
 	// Smooth scroll to #target's.
 	// From: http://css-tricks.com/snippets/jquery/smooth-scrolling/
