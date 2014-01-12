@@ -19,6 +19,7 @@ $app->get('/', function () use ($app, $config) {
 		'devEnviroment' => $app->get_env,
 		'skills' => $app->fetch_skills,
 		'repos' => $app->fetch_repos,
+		'github_events' => $app->fetch_github_events,
 		'designs' => $app->fetch_designs,
 		'jobs' => $app->fetch_jobs,
 		'timeline' => $app->fetch_timeline,
@@ -185,27 +186,27 @@ $app->fetch_skills = function() {
 		'Services' => array(
 			array(
 				'title' => 'Basecamp',
-				'url' => null,
+				'url' => 'http://basecamp.com',
 				),
 			array(
 				'title' => 'Hipchat',
-				'url' => null,
+				'url' => 'http://hipchat.com',
 				),
 			array(
 				'title' => 'Leankit',
-				'url' => null,
+				'url' => 'http://leankit.com',
 				),
 			array(
 				'title' => 'Sprint.ly',
-				'url' => null,
+				'url' => 'http://sprint.ly',
 				),
 			array(
 				'title' => 'Trello',
-				'url' => null,
+				'url' => 'http://trello.com',
 				),
 			array(
-				'title' => 'Trello',
-				'url' => null,
+				'title' => 'Google Apps',
+				'url' => 'http://www.google.com/enterprise/apps/business/',
 				),
 			array(
 				'title' => 'Github',
@@ -365,6 +366,69 @@ $app->fetch_repos = function () {
 	return $orderedRepos;
 };
 
+
+// Github events:
+$app->fetch_github_events = function () {
+
+	// Set up cache:
+	$key = FileSystemCache::generateCacheKey('github_events');
+	$events = FileSystemCache::retrieve($key);
+
+	// If no cache found:
+	if ($events === false) {
+
+		// Fetch from API
+		$headers = array('Accept' => 'application/json');
+		$options = array('User-Agent' => 't1mmen');
+		$response = Requests::get('https://api.github.com/users/t1mmen/events', $headers, $options);
+
+   		$events = json_decode($response->body, true);
+
+		// Store cache:
+		FileSystemCache::store($key, $events, 3600);
+	}
+
+	// Order Github events:
+	$orderedEvents = array();
+	$eventsToDisplay = array('PullRequestEvent');
+
+	foreach ($events as $event) {
+
+		// Show only the events we want:
+		if (!in_array($event['type'], $eventsToDisplay)) {
+			continue;
+		}
+
+		$timestamp = strtotime($event['created_at']);
+
+		$repoDetails = explode('/', $event['repo']['name']);
+
+		$orderedEvents[$timestamp] = array(
+			'name' => end($repoDetails),
+			'homepage' => $event['payload']['pull_request']['base']['repo']['html_url'],
+			'description' => $event['payload']['pull_request']['base']['repo']['description'],
+			'language' => $event['payload']['pull_request']['base']['repo']['language'],
+			'account' => reset($repoDetails),
+			'stargazers_count' => $event['payload']['pull_request']['base']['repo']['stargazers_count'],
+			'watchers_count' => $event['payload']['pull_request']['base']['repo']['watchers_count'],
+			'forks' => $event['payload']['pull_request']['base']['repo']['forks'],
+			'homepage' => 'http://github.com/'.$event['repo']['name'].'/pulls/'.$event['payload']['pull_request']['number'],
+			'updated_timestamp' => $timestamp,
+		);
+
+	}
+
+	// Order by date modified:
+	krsort($orderedEvents);
+
+	// Only show most recent ones...
+	$orderedEvents = array_slice($orderedEvents, 0, 3);
+
+	return $orderedEvents;
+};
+
+
+// Timeline
 $app->fetch_timeline = function () {
 	$timeline = array(
 		array(

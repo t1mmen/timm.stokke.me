@@ -82,6 +82,9 @@ module.exports = function(grunt) {
 		},
 		// Watch
 		watch: {
+			options : {
+				livereload: false,
+			},
 			scripts: {
 				files: ['js/*.js'],
 				tasks: ['concat', 'uglify'],

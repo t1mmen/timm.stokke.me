@@ -3,7 +3,7 @@
  * INTRO
  * ****************************************************************** */
  ?>
-<section class="primary" id="intro" style="padding-top: 50px;">
+<section id="intro" style="padding-top: 50px;">
 <div class="container">
 
 	<div class="row">
@@ -42,7 +42,7 @@
  * SKILLS OVERVIEW
  * ****************************************************************** */
  ?>
-<section id="ido">
+<section id="ido" class="primary">
 <div class="container">
 
 	<div class="page-header">
@@ -125,7 +125,7 @@ if (isset($this->data->designs)) :
 		<div class="col-md-6 col-sm-6 col-xs-12">
 
 			<div class="browser">
-				<div class="chrome animated invisible flipOutX">
+				<div class="chrome">
 					<div class="buttons">
 						<div class="exit"></div>
 						<div class="minimize"></div>
@@ -136,45 +136,33 @@ if (isset($this->data->designs)) :
 				<div class="viewport">
 
 					<div class="owl-carousel">
-						<div class="cover" data-show-chrome="off">
-							<h3>
-								<small><?php echo $design['client']; ?></small><br>
-								<a href="<?php echo $design['url']; ?>"><?php echo $design['project_name']; ?></a>
-							</h3>
-
-							<?php if (isset($design['tease'])) : ?>
-								<p class="lead"><?php echo $design['tease']; ?></p>
-							<?php endif; ?>
-
-							<span class="next-slide btn btn-default btn-sm">see screenshots</span>
-						</div>
-
-						<?php
-						foreach ($design['media'] as $media) {
-							echo "<div data-show-chrome=\"on\"><img data-src='$media' class='lazyOwl'></div>";
-						}
-						 ?>
-
-						<div class="cover" data-show-chrome="off">
-
-							<h4>
-								<small><?php echo $design['client']; ?></small><br>
-								<a href="<?php echo $design['url']; ?>"><?php echo $design['project_name']; ?></a>
-							</h4>
-
-							<p><?php echo $design['description']; ?></p>
-
-							<a href="<?php echo $design['url']; ?>" target="_blank" class="btn btn-default btn-sm">visit</a>
-
-						</div>
-
+					<?php
+					foreach ($design['media'] as $media) {
+						echo "<div><img data-src='$media' class='lazyOwl'></div>";
+					}
+					 ?>
 					</div>
 
 				</div>
 			</div>
 
-		</div>
+			<h4 class="pull-right text-right">
+				<small>client</small><br>
+				<?php echo $design['client']; ?>
+			</h4>
 
+			<h4>
+				<small>project</small><br>
+				<?php echo $design['project_name']; ?>
+			</h4>
+
+			<?php echo $design['description']; ?>
+
+			<p>
+			<a href="<?php echo $design['url']; ?>" target="_blank" class="btn btn-primary btn-sm">visit</a>
+			</p>
+
+		</div>
 		<?php
 		if ($counter==2) {
 			$counter=0;
@@ -198,17 +186,21 @@ if (isset($this->data->designs)) :
 if (isset($this->data->repos)) :
 ?>
 
-<section id="github" class="brand-primary">
+<section id="github" class="success">
 <div class="container">
 
 
 	<div class="page-header">
-		<h1><i class="fa fa-github text-muted"></i> Recent Open Source Work</h1>
+		<h1>My Open Source Projects</h1>
 	</div>
 
 
 	<div class="row">
-		<?php foreach ($this->data->repos as $repo) : ?>
+		<?php
+		$counter=0;
+		foreach ($this->data->repos as $repo) :
+			$counter++;
+		?>
 		<div class="col-md-4  col-sm-4 col-xs-12">
 
 			<h4>
@@ -250,13 +242,50 @@ if (isset($this->data->repos)) :
 			</p>
 
 		</div>
-		<?php endforeach; ?>
+		<?php
+		if ($counter==3) {
+			$counter=0;
+			echo '<div class="clearfix invisible-xs"></div>';
+		}
+		endforeach;
+		?>
 
-		<div class="col-md-12">
-			<a href="https://github.com/t1mmen/" target="_blank" class="btn btn-primary btn-sm">Browse more on Github</a>
-		</div>
 	</div>
 
+	<p></p>
+	<!-- Contributions -->
+	<div class="page-header">
+		<h4>Recently contributed to...</h4>
+	</div>
+
+	<div class="row">
+		<?php
+		$counter=0;
+		foreach ($this->data->github_events as $repo) :
+			$counter++;
+		?>
+		<div class="col-md-4  col-sm-4 col-xs-12">
+
+			<h4>
+				<a href="<?php echo $repo['homepage'] ?>" target="_blank" class="ellipse block" title="Browse the <?php echo $repo['name'] ?> repository"><?php echo $repo['name'] ?></a>
+				<small><?php echo $repo['language'] ?></small>
+			</h4>
+
+			<p><?php echo $repo['description'] ?></p>
+
+		</div>
+		<?php
+		if ($counter==3) {
+			$counter=0;
+			echo '<div class="clearfix invisible-xs"></div>';
+		}
+		endforeach;
+		?>
+
+		<div class="col-md-12">
+			<a href="https://github.com/t1mmen/" target="_blank" class="btn btn-success">Browse more on Github</a>
+		</div>
+	</div>
 
 </div>
 </section>
@@ -274,7 +303,7 @@ if (isset($this->data->jobs)) :
 <div class="container">
 
 	<div class="page-header">
-		<h1><i class="fa fa-linkedin-square text-muted"></i> Employment history</h1>
+		<h1>Employment history</h1>
 	</div>
 
 	<div class="row">
@@ -303,10 +332,10 @@ if (isset($this->data->jobs)) :
 	</div>
 
 
-	<a href="http://www.linkedin.com/in/timmstokke" target="_blank" class="btn btn-primary btn-sm">Learn more on LinkedIn</a>
+	<a href="http://www.linkedin.com/in/timmstokke" target="_blank" class="btn btn-primary">Learn more on LinkedIn</a>
 	&nbsp;
 	<p class="visible-xs"></p>
-	<a href="#buzzwords" data-target=".buzzwords" class="js-expand btn btn-success btn-sm" data-toggle="false">
+	<a href="#buzzwords" data-target=".buzzwords" class="js-expand btn btn-success" data-toggle="false">
 		view my skills
 	</a>
 
@@ -356,7 +385,7 @@ if (isset($this->data->jobs)) :
 if (isset($this->data->timeline)) :
 ?>
 
-<section id="timeline">
+<section id="timeline"  class="info">
 <div class="container">
 
 	<div class="page-header">
@@ -413,7 +442,7 @@ if (isset($this->data->timeline)) :
 			<?php endforeach; ?>
 			</ul>
 
-			<a href="#timeline" data-target=".timeline-node-personal" class="js-expand btn btn-success btn-sm" data-animation-in="flipInX">Show personal highlights, too.</a>
+			<a href="#timeline" data-target=".timeline-node-personal" class="js-expand btn btn-info" data-animation-in="flipInX">Show personal highlights, too.</a>
 		</div>
 	</div>
 

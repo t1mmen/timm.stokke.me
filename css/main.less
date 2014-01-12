@@ -100,7 +100,7 @@ body {
 .owl-item .cover {
 	padding: 20px;
 	color: #fff;
-	background-color: @brand-info;
+	background-color: @brand-warning;
 	border-radius: @border-radius-large;
 
 	h4, p {
@@ -108,11 +108,11 @@ body {
 	}
 
 	small {
-		color: lighten(@brand-info, 20%);
+		color: lighten(@brand-warning, 20%);
 	}
 
 	a:not(.btn) {
-		color: darken(@brand-info, 30%);
+		color: darken(@brand-warning, 30%);
 	}
 }
 
@@ -148,36 +148,61 @@ section, footer {
 	margin-top: 0;
 }
 
-
+// Section color accents ==================================================
+//
 section,
 footer {
 
-	&:nth-of-type(2n) {
-		@base-section-color: @brand-info;
-		border: 1px solid lighten(@base-section-color, 25%);
-		border-left-width: 0;
-		border-right-width: 0;
-		background: lighten(@base-section-color, 35%);
+	&.primary {
+		.brandSection(@brand-primary, #fff, darken(@brand-primary, 10%), darken(@brand-primary, 10%));
+	}
+	&.silver {
+		.brandSection(@gray-light, #111, #eee, @gray);
+	}
 
-		h1,h2,h3,h4,h5,h6,p {
-			color: darken(@base-section-color, 20%);
-			text-shadow: 0px 1px 0px #fff;
-		}
+	&.info {
+		.brandSection(@brand-info, #fff, lighten(@brand-info, 15%), @brand-info);
+	}
 
-		a:not(.btn) {
-			color: darken(@base-section-color, 30%);
-			text-shadow: 0px 1px 0px #fff;
-		}
+	&.warning {
+		.brandSection(@brand-warning, #111, #111, @brand-warning);
+	}
+	&.success {
+		.brandSection(@brand-success, #fff, darken(@brand-success, 12%), @brand-success);
+	}
 
-		.text-muted {
-			color: lighten(@base-section-color, 20%);
-		}
+}
 
-		.page-header {
-			border-bottom-color: lighten(@base-section-color, 30%);
+.brandSection(@section-base-color, @text-color : #fff, @muted-color: #eee, @muted-color: #ccc) {
+
+
+	border: 1px solid lighten(@section-base-color, 25%);
+	border-left-width: 0;
+	border-right-width: 0;
+	background: @section-base-color;
+
+	h1,h2,h3,h4,h5,h6,p {
+		color: @text-color;
+		text-shadow: none;
+		//text-shadow: 0px 1px 0px darken(@section-base-color, 15%);
+
+		small, .text-muted, i {
+			color: @muted-color;
+			//color: lighten(@text-color, 25%);
 		}
 	}
 
+	a:not(.btn) {
+		color: darken(@section-base-color, 20%);
+		//text-shadow: 0px 1px 0px lighten(@section-base-color, 15%);
+	}
+
+	.page-header {
+		border-bottom-color: @muted-color;
+	}
+	hr {
+		border-top-color: @muted-color;
+	}
 }
 
 
