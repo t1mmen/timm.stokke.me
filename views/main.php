@@ -278,7 +278,11 @@ if (isset($this->data->jobs)) :
 	</div>
 
 	<div class="row">
-		<?php foreach ($this->data->jobs as $job) : ?>
+		<?php
+		$counter = 0;
+		foreach ($this->data->jobs as $job) :
+		$counter++;
+		?>
 
 			<div class="col-md-4 col-sm-4 col-xs-6">
 				<h4>
@@ -289,12 +293,19 @@ if (isset($this->data->jobs)) :
 				<p><?php echo $job['title'] ?></p>
 			</div>
 
-		<?php endforeach; ?>
+		<?php
+		if ($counter==2) {
+			$counter=0;
+			echo '<div class="clearfix visible-xs"></div>';
+		}
+		endforeach;
+		?>
 	</div>
 
 
 	<a href="http://www.linkedin.com/in/timmstokke" target="_blank" class="btn btn-primary btn-sm">Learn more on LinkedIn</a>
 	&nbsp;
+	<p class="visible-xs"></p>
 	<a href="#buzzwords" data-target=".buzzwords" class="js-expand btn btn-success btn-sm" data-toggle="false">
 		view my skills
 	</a>
