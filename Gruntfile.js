@@ -82,21 +82,18 @@ module.exports = function(grunt) {
 		},
 		// Watch
 		watch: {
-			options: {
-				livereload: true,
-			},
 			scripts: {
 				files: ['js/*.js'],
 				tasks: ['concat', 'uglify'],
 				options: {
-					spawn: false,
+					livereload: true
 				},
 			},
 			css: {
 				files: ['css/*.less', 'css/assets/*.less'],
 				tasks: ['less'],
 				options: {
-					spawn: false,
+					livereload: true
 				}
 			}
 		},
