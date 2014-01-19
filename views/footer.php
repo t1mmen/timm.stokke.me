@@ -7,7 +7,10 @@
 <div class="container">
 
 	<div class="page-header">
-		<h1>Get in touch</h1>
+		<h1>
+			<small>Want to say hi?</small><br>
+			Contact me
+		</h1>
 	</div>
 
 	<div class="row">
@@ -18,8 +21,8 @@
 			<p>
 				<a href="mailto:<?=$this->data->config['email']?>" class="btn btn-primary btn-block">
 					<i class="fa fa-envelope fa-2x"></i><br>
-					<span class="hidden-xs"><?=$this->data->config['email']?></span>
-					<span class="visible-xs">email</span>
+					<span class="hidden-xs hidden-sm"><?=$this->data->config['email']?></span>
+					<span class="visible-xs visible-sm">email</span>
 				</a>
 			</p>
 		</div>
