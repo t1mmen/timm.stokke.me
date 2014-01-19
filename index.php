@@ -75,7 +75,7 @@ $app->fetch_skills = function() {
 			array(
 				'title' => 'HTML5',
 				'url' => 'http://en.wikipedia.org/wiki/HTML5',
-				'votes' => 9,
+				//'votes' => 9,
 				),
 			array(
 				'title' => 'CSS3',
@@ -445,55 +445,52 @@ $app->fetch_timeline = function () {
 			'title' => 'Graduated from IT-Akademiet',
 			'year' => 2002,
 			'type' => 'jobchange',
+			'description' => 'Another webdeveloper headed straight into the dotcom crash.'
 			),
 		array(
 			'title' => 'Joined my first startup',
 			'year' => 2002,
-			'description' => 'Hired by my former teacher, bootstrapped.',
+			'description' => 'My former teacher hired me out of school. We did websites and webapps, for the most part.',
 			'type' => 'jobchange',
 			),
 		array(
-			'title' => 'Shipped 2net Publish',
+			'title' => 'Shipped first product',
 			'year' => 2004,
 			'description' => "My first major SaaS launch, this content management system is still in use by several major websites today.",
 			),
+		// array(
+		// 	'title' => 'Played the World Series of Poker',
+		// 	'year' => 2006,
+		// 	'description' => "Busting out with aces vs jacks was rough, but what an experience! These days, I don't play much outside of a homegame or two a year.",
+		// 	'type' => 'personal',
+		// 	),
 		array(
-			'title' => 'Played the World Series of Poker',
-			'year' => 2006,
-			'description' => "Busting out with aces vs jacks was rough, but what an experience! These days, I don't play much outside of a homegame or two a year.",
-			'type' => 'personal',
-			),
-		array(
-			'title' => 'Aquihired',
+			'title' => 'Startup aquired',
 			'year' => 2007,
-			'description' => 'Colours bought Aspekt',
+			'description' => 'We joined Colours in building a dedicated team of industry experts, designers, developers, 3D artists and filmmakers. ',
 			'type' => 'jobchange',
 			),
 		array(
 			'title' => 'Met the most beautiful girl in the world',
 			'year' => 2008,
-			'description' => 'To this day, she continues to impress me with her awesomeness! <i class="fa fa-heart"></i>',
+			'description' => 'She is totally awesome. Together, we have Marley, the greatest boston terrier in the world. <i class="fa fa-heart"></i>',
 			'type' => 'personal',
 			),
 		array(
-			'title' => 'Designed apartment blueprints',
+			'title' => 'Designed Blueprints',
 			'year' => 2009,
-			'description' => 'Designing living spaces proved a fun challenge.',
+			'description' => 'Designing my own apartment blueprints proved a facinating challenge. Superhappy with the results!',
 			),
 		array(
-			'title' => 'Released my first jQuery plugin',
-			'url' => 'https://github.com/t1mmen/jquery-handleform',
-			'year' => 2012,
-			),
-		array(
-			'title' => 'Got a dog!',
-			'year' => 2012,
-			'description' => 'The most glorious boston terrier became ours.',
+			'title' => 'ColoursCMS grows up',
+			'year' => 2013,
+			'description' => 'Reviewers called it "<a href="http://www.cmscritic.com/colours-cms-review/" target="_blank">an extremely pleasant CMS to use</a>".',
 			'type' => 'personal',
 			),
 		array(
 			'title' => 'Moving to Canada',
 			'year' => 2014,
+			'description' => "I'm not quite sure what I'll be doing, though. <a href='#contact'>Should we talk?</a>"
 			),
 		);
 	return $timeline;

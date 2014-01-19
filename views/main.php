@@ -64,7 +64,7 @@
 				Concepts
 			</h3>
 
-			<p>From a napkin drawings to interactive mockups, I work efficiently in the mockup and prototyping stages.</p>
+			<p>From a napkin drawings to interactive mockups, I work efficiently in the idea, concept and prototyping stages.</p>
 
 
 		</div>
@@ -114,7 +114,7 @@
 if (isset($this->data->designs)) :
 ?>
 
-<section id="designs">
+<section id="portfolio">
 <div class="container">
 
 	<h1>Some of my work</h1>
@@ -340,7 +340,7 @@ if (isset($this->data->jobs)) :
 	<a href="http://www.linkedin.com/in/timmstokke" target="_blank" class="btn btn-primary">Learn more on LinkedIn</a>
 	&nbsp;
 	<p class="visible-xs"></p>
-	<a href="#buzzwords" data-target=".buzzwords" class="js-expand btn btn-success" data-toggle="false">
+	<a href="#buzzwords" data-target=".buzzwords" class="js-expand btn btn-default" data-toggle="false">
 		view my skills
 	</a>
 
@@ -355,7 +355,9 @@ if (isset($this->data->jobs)) :
 		<div class="col-md-12">
 
 				<div class="page-header">
-					<h1>SKILLS</h1>
+					<h3>
+						Skills
+					</h3>
 				</div>
 
 				<ul class="columns">
@@ -406,16 +408,8 @@ if (isset($this->data->timeline)) :
 			foreach ($this->data->timeline as $key => $timeline) :
 				$class = 'timeline-node animated invisible';
 
-				if (isset($timeline['type'])) {
-					$class .= ' timeline-node-'.$timeline['type'];
-				}
-
 				if (isset($timeline['extendedDescription'])) {
 					$class .= ' has-extended-body';
-				}
-
-				if (isset($timeline['type']) && $timeline['type'] == 'personal') {
-					$class .= ' hide';
 				}
 			?>
 
@@ -446,8 +440,6 @@ if (isset($this->data->timeline)) :
 
 			<?php endforeach; ?>
 			</ul>
-
-			<a href="#timeline" data-target=".timeline-node-personal" class="js-expand btn btn-info" data-animation-in="flipInX">Show personal highlights, too.</a>
 		</div>
 	</div>
 

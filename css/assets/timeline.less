@@ -16,6 +16,7 @@
 
 	}
 
+
 	.body {
 		z-index: 2;
 		position: relative;
@@ -37,22 +38,22 @@
 	// Personal accent
 	.timeline-node-personal {
 		.body {
-			border-bottom-color: @btn-default-border;
+			border-bottom-color: @btn-danger-border;
 		}
 		.connector {
-			background-color: @btn-default-border;
+			background-color: @btn-danger-border;
 		}
 		.date {
-			background-color: @btn-default-bg;
-			border-color: @btn-default-border;
+			background-color: @btn-danger-bg;
+			border-color: @btn-danger-border;
 		}
 		.extended-body div {
 			color: #fff;
-			background-color: @btn-default-bg;
+			background-color: @btn-danger-bg;
 		}
 		&.has-extended-body .body:before {
-			background-color: @btn-default-bg;
-			border-color: @btn-default-border;
+			background-color: @btn-danger-bg;
+			border-color: @btn-danger-border;
 		}
 	}
 
@@ -135,7 +136,7 @@
 		position: absolute;
 		left: -30px;
 		.size(57px, 57px);
-		padding-top: 13px;
+		padding-top: 9px;
 		text-align: center;
 		background-color: @btn-info-bg;
 		border-radius: 50px;
@@ -153,8 +154,8 @@
 @media (min-width: @screen-sm-min) {
 	.timeline {
 
-		li:nth-child(even) {
 
+		li.is-visible:nth-of-type(even) {
 			.extended-body,
 			.body {
 				margin-left: 50%;
@@ -166,7 +167,8 @@
 			}
 		}
 
-		li:nth-child(odd) {
+		li.is-visible:nth-of-type(odd) {
+
 			.extended-body,
 			.body {
 				margin-left: 5%;

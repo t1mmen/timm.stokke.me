@@ -11,6 +11,7 @@ $(document).ready(function() {
 
 
 	// Generic "show element" style snippet
+	// todo: http://visionmedia.github.io/move.js/
 	$('.js-expand').click(function(e){
 
 		e.preventDefault();
@@ -44,6 +45,7 @@ $(document).ready(function() {
 			toggle = true;
 		}
 
+		// If target is active already, reset:
 		if ($target.hasClass(targetAnimationIn) && toggle == true) {
 
 			$target.removeClass(targetAnimationIn).addClass(targetAnimationOut);
@@ -110,7 +112,7 @@ $(document).ready(function() {
 			if (target.length) {
 				$('html,body').animate({
 					scrollTop: target.offset().top-7 // gives that top branding :P
-				}, 600);
+				}, 400);
 				return false;
 			}
 		}
