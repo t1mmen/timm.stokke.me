@@ -456,7 +456,7 @@ $app->fetch_timeline = function () {
 		array(
 			'title' => 'Shipped first product',
 			'year' => 2004,
-			'description' => "My first major SaaS launch, the PublishOnline content management system is still in use by several major websites today.",
+			'description' => "My first major SaaS launch! PublishOnline, a content management system, is still in use by several major websites to this day.",
 			),
 		// array(
 		// 	'title' => 'Played the World Series of Poker',

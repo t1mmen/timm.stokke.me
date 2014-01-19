@@ -98,18 +98,48 @@ body {
 	background: rgba(255,255,255,0.95);
 	border-bottom: 1px solid @gray-lighter;
 	//background: #292f36;
-	padding: 15px 0;
+	//padding: 15px 0;
 	.clearfix();
 	font-family: @font-family-sans-serif;
 
 	ul {
+		padding: 0 15px;
 
 		li {
-			margin-left: @grid-gutter-width;
+			//margin-left: @grid-gutter-width;
 			display: inline-block;
-			a {
+
+
+			a, span {
+				padding: 20px;
+				border-right: 1px solid #eee;
 				display: inline-block;
 			}
+
+			a {
+				text-decoration: none;
+
+				&:hover {
+					color: #fff;
+					background: @link-color;
+				}
+			}
+
+
+			&:first-of-type a,
+			&:first-of-type span {
+				border-left: 1px solid #eee;
+				padding-left: 20px;
+			}
+
+			&:only-of-type a,
+			&:only-of-type span {
+				border: 0;
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+
 		}
 	}
 

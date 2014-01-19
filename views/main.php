@@ -3,7 +3,7 @@
  * INTRO
  * ****************************************************************** */
  ?>
-<section id="intro" style="padding-top: 50px;">
+<section id="hello" style="padding-top: 50px;">
 <div class="container">
 
 	<div class="row">

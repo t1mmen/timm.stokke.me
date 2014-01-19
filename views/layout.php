@@ -30,14 +30,19 @@ if ($this->data->devEnviroment == 'dev') {
 
 
 					<!-- menu -->
-					<ul class="pull-left">
+					<ul class="pull-left hidden-xs">
 						<li>
-							Timm Stokke
+							<span>Timm Stokke</span>
 						</li>
 					</ul>
 
 					<!-- menu -->
 					<ul class="pull-right">
+						<li>
+							<a href="#hello">
+								Hi
+							</a>
+						</li>
 						<li>
 							<a href="#portfolio">
 								Portfolio
