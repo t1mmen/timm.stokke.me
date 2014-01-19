@@ -392,7 +392,7 @@ if (isset($this->data->jobs)) :
 if (isset($this->data->timeline)) :
 ?>
 
-<section id="timeline"  class="info">
+<section id="timeline"  class="info no-padding-bottom">
 <div class="container">
 
 	<div class="page-header">

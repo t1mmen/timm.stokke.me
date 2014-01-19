@@ -1,18 +1,17 @@
 
 // Timeline
 // --------
-
 .timeline {
 	border-left: 5px solid @btn-info-border;
 	margin-left: 25px;
 	position: relative;
-	margin-bottom: @grid-gutter-width;
+	padding-bottom: @grid-gutter-width;
 
 	li {
 		.clearfix();
 		list-style: none;
 		display: block;
-		margin-bottom: @grid-gutter-width/4;
+		padding-bottom: @grid-gutter-width/4;
 
 	}
 
@@ -154,8 +153,8 @@
 @media (min-width: @screen-sm-min) {
 	.timeline {
 
+		li:nth-of-type(even) {
 
-		li.is-visible:nth-of-type(even) {
 			.extended-body,
 			.body {
 				margin-left: 50%;
@@ -167,18 +166,18 @@
 			}
 		}
 
-		li.is-visible:nth-of-type(odd) {
+		// li:nth-of-type(odd) {
 
-			.extended-body,
-			.body {
-				margin-left: 5%;
-			}
+		// 	.extended-body,
+		// 	.body {
+		// 		margin-left: 5%;
+		// 	}
 
-			.connector {
-				left: -15%;
-				width: 15%;
-			}
-		}
+		// 	.connector {
+		// 		left: -15%;
+		// 		width: 15%;
+		// 	}
+		// }
 
 
 	}
@@ -188,7 +187,6 @@
 	.timeline {
 
 		li {
-
 			.body {
 				max-width: 100% !important;
 			}
