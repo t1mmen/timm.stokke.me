@@ -61,7 +61,7 @@
 		<div class="col-md-3 col-sm-6 col-xs-12">
 
 
-			<h3 class="text-center">
+			<h3>
 				<i class="fa fa-lightbulb-o fa-3x text-muted"></i><br>
 				Concepts
 			</h3>
@@ -74,7 +74,7 @@
 		<div class="col-md-3 col-sm-6 col-xs-12">
 
 
-			<h3 class="text-center">
+			<h3>
 				<i class="fa fa-eye fa-3x text-muted"></i><br>
 				Design
 			</h3>
@@ -84,7 +84,7 @@
 		</div>
 		<div class="col-md-3 col-sm-6 col-xs-12">
 
-			<h3 class="text-center">
+			<h3>
 				<i class="fa fa-code fa-3x text-muted"></i><br>
 				Frontend
 			</h3>
@@ -95,7 +95,7 @@
 		<div class="col-md-3 col-sm-6 col-xs-12">
 
 
-			<h3 class="text-center">
+			<h3>
 				<i class="fa fa-cog fa-3x text-muted"></i><br>
 				Backend
 			</h3>
