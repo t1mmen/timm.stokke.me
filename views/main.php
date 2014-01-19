@@ -51,7 +51,7 @@
 
 	<div class="page-header">
 		<h1>
-			<small>In brief</small><br>
+			<small>What I do</small><br>
 			Areas of Expertise
 		</h1>
 	</div>
@@ -101,6 +101,30 @@
 			</h3>
 			<p>
 				I work on the LAMP stack. CakePHP has been my go-to framework the last 5 years.
+			</p>
+
+		</div>
+	</div>
+	<!-- -->
+	<p></p>
+	<div class="row">
+		<div class="col-md-3">
+
+			<div class="pxage-header">
+				<h3>
+					<small>Basically, I'm a </small><br>
+					fullstack developer
+				</h3>
+			</div>
+
+		</div>
+		<div class="col-md-9">
+
+			<p>
+				I <strong>love</strong> building things on the web, and knowing every moving part enables me to build and ship better.
+				I thrive when I get to work with <strong>passionate people</strong>. I have <strong>wide ranging experience</strong>
+				working in a full service agency setting.
+
 			</p>
 
 		</div>
