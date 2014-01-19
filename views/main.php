@@ -27,6 +27,8 @@
 
 			<p>
 				<a href="#contact" class="btn btn-success">Let's talk</a>
+				&nbsp;
+				<a href="#portfolio" class="btn btn-default">View my work</a>
 			</p>
 
 
@@ -46,7 +48,10 @@
 <div class="container">
 
 	<div class="page-header">
-		<h1>I do...</h1>
+		<h1>
+			<small>In brief</small><br>
+			Areas of Expertise
+		</h1>
 	</div>
 
 	<div class="row">
@@ -54,12 +59,12 @@
 		<div class="col-md-3 col-sm-6 col-xs-12">
 
 
-			<h3>
-				<i class="fa fa-lightbulb-o fa-2x text-muted"></i><br>
+			<h3 class="text-center">
+				<i class="fa fa-lightbulb-o fa-3x text-muted"></i><br>
 				Concepts
 			</h3>
 
-			<p>From a napkin drawing to interactive mockups, I work efficiently in the idea & lo-fi phase.</p>
+			<p>From a napkin drawings to interactive mockups, I work efficiently in the mockup and prototyping stages.</p>
 
 
 		</div>
@@ -67,18 +72,18 @@
 		<div class="col-md-3 col-sm-6 col-xs-12">
 
 
-			<h3>
-				<i class="fa fa-eye fa-2x text-muted"></i><br>
+			<h3 class="text-center">
+				<i class="fa fa-eye fa-3x text-muted"></i><br>
 				Design
 			</h3>
-			<p>User interface & experience design for web application, websites & mobile apps.</p>
+			<p>I love doing user interface & experience design for web application, websites & mobile apps.</p>
 
 
 		</div>
 		<div class="col-md-3 col-sm-6 col-xs-12">
 
-			<h3 class="center-block">
-				<i class="fa fa-code fa-2x text-muted"></i><br>
+			<h3 class="text-center">
+				<i class="fa fa-code fa-3x text-muted"></i><br>
 				Frontend
 			</h3>
 			<p>I am fluent in HTML, CSS and jQuery. I'm dabbeling with JS & frontend MVC frameworks.</p>
@@ -88,8 +93,8 @@
 		<div class="col-md-3 col-sm-6 col-xs-12">
 
 
-			<h3>
-				<i class="fa fa-cog fa-2x text-muted"></i><br>
+			<h3 class="text-center">
+				<i class="fa fa-cog fa-3x text-muted"></i><br>
 				Backend
 			</h3>
 			<p>
@@ -449,4 +454,3 @@ if (isset($this->data->timeline)) :
 </div>
 </section>
 <?php endif; ?>
-

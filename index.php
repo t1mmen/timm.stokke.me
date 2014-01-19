@@ -33,7 +33,7 @@ $app->get_env = function() {
 
  	$enviroment = 'live';
 
-	if ($_SERVER['HTTP_HOST'] === 'localhost') {
+	if ($_SERVER['HTTP_HOST'] === 'localhost' || $_SERVER['HTTP_HOST'] === 'timm.local') {
 		$enviroment = 'dev';
 	}
 
@@ -224,6 +224,7 @@ $app->fetch_designs = function() {
 	$designs = array(
 		// ColoursCMS
 		array(
+			'thumbnail' => false,
 			'media' => array(
 				'img/projects/ccms1.jpg',
 				'img/projects/ccms2.jpg',
@@ -232,14 +233,14 @@ $app->fetch_designs = function() {
 			'client' => 'Colours',
 			'project_name' => 'ColoursCMS',
 			'url' => 'http://www.colourscms.no',
+			'disciplines' => array('concept', 'design', 'frontend', 'backend'),
 			'tease' => 'ColoursCMS is a beautifully simple and powerful content management system',
 			'description' => "
 				<p>
 					ColoursCMS is a beautifully simple and powerful content management system, build on CakePHP.
 				</p>
 				<p>
-					I worked on concepts, spec, UI & UX, frontend and backend development
-					in the 2010–2013 timeframe.
+					I worked on ColoursCMS as concept creator and head of UI & UX. I worked both frontend and backend in the 2010–2013 timeframe.
 				</p>",
 			),
 		// SPREK
@@ -250,7 +251,7 @@ $app->fetch_designs = function() {
 				),
 			'client' => 'Bergens Tidende',
 			'project_name' => 'Sprek',
-			'skills' => array('UI', 'UX', 'Frontend', 'Backend', 'Concept', 'Business'),
+			'disciplines' => array('UI', 'UX', 'Frontend', 'Backend', 'Concept', 'Business'),
 			'url' => 'http://tur.bt.no',
 			'tease' => 'A service for finding and taking hikes.',
 			'description' => '
@@ -278,6 +279,7 @@ $app->fetch_designs = function() {
 			'client' => 'GCRieber',
 			'project_name' => 'Responsive redesign',
 			'url' => 'http://www.gcrieber-eiendom.no',
+			'disciplines' => array(),
 			'tease' => 'Landowner and properties holder in Bergen, Norway.',
 			'description' => '
 				<p>
@@ -293,6 +295,8 @@ $app->fetch_designs = function() {
 			'client' => 'Randaberg Group',
 			'project_name' => 'Responsive redesign',
 			'url' => 'http://www.rgroup.no',
+			'disciplines' => array(),
+			'tease' => '',
 			'description' => "
 				<p>
 					Randaberg Group offers a wide array of products and services in steel production and protection for subsea and storage

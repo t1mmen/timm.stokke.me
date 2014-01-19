@@ -86,15 +86,21 @@ module.exports = function(grunt) {
 				livereload: false,
 			},
 			scripts: {
-				files: ['js/*.js'],
+				files: ['js/*.js', '!js/main.min.js'],
 				tasks: ['concat', 'uglify'],
 				options: {
 					livereload: true
 				},
 			},
-			css: {
+			less: {
 				files: ['css/*.less', 'css/assets/*.less'],
-				tasks: ['less'],
+				tasks: ['less:development'],
+				options: {
+					livereload: false
+				}
+			},
+			css: {
+				files: ['css/*.css'],
 				options: {
 					livereload: true
 				}
