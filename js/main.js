@@ -10,6 +10,17 @@ $(document).ready(function() {
 	}, 1000);
 
 
+	// Headroom.js
+	$('#headroom').headroom({
+		"tolerance": 5,
+		"offset": 5,
+		"classes": {
+			"initial": "animated",
+			"pinned": "slideInDown",
+			"unpinned": "slideOutUp"
+		}
+	});
+
 	// Generic "show element" style snippet
 	// todo: http://visionmedia.github.io/move.js/
 	$('.js-expand').click(function(e){
@@ -65,8 +76,6 @@ $(document).ready(function() {
 		}
 
 	});
-
-
 
 	// Carousel:
 	$(".owl-carousel").owlCarousel({

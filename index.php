@@ -473,7 +473,7 @@ $app->fetch_timeline = function () {
 		array(
 			'title' => 'Met the most awesome girl',
 			'year' => 2008,
-			'description' => 'Together, we have Marley, the greatest boston terrier in the world. <i class="fa fa-heart"></i>',
+			'description' => 'Together we have <a href="https://twitter.com/love_marles">Marley, the greatest Boston Terrier</a> in the world. <i class="fa fa-heart"></i>',
 			'type' => 'personal',
 			),
 		array(

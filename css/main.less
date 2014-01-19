@@ -87,6 +87,39 @@ body {
 }
 
 
+// Headroom.js ====================================================================
+
+.headroom {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	background: rgba(255,255,255,0.95);
+	border-bottom: 1px solid @gray-lighter;
+	//background: #292f36;
+	padding: 15px 0;
+	.clearfix();
+	font-family: @font-family-sans-serif;
+
+	ul {
+
+		li {
+			margin-left: @grid-gutter-width;
+			display: inline-block;
+			a {
+				display: inline-block;
+			}
+		}
+	}
+
+	&.headroom--unpinned {
+	}
+
+	&.headroom--pinned {
+	}
+}
+
 
 // OwlCarousel ====================================================================
 

@@ -22,6 +22,44 @@ if ($this->data->devEnviroment == 'dev') {
 	</head>
 	<body>
 
+
+		<header id="headroom" class="headroom slideOutUp">
+			<div class="container">
+				<div class="row">
+
+
+
+					<!-- menu -->
+					<ul class="pull-left">
+						<li>
+							Timm Stokke
+						</li>
+					</ul>
+
+					<!-- menu -->
+					<ul class="pull-right">
+						<li>
+							<a href="#portfolio">
+								Portfolio
+							</a>
+						</li>
+						<li>
+							<a href="#employment-history">
+								History
+							</a>
+						</li>
+						<li>
+							<a href="#contact">
+								Contact
+							</a>
+						</li>
+					</ul>
+					<!-- end menu -->
+
+				</div>
+			</div>
+		</header>
+
 		<?php
 		// Load view:
 		echo $yield;
