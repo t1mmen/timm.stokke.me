@@ -28,6 +28,8 @@
 			<p>
 				<a href="#contact" class="btn btn-success">Let's talk</a>
 				&nbsp;
+				<br class="visible-xs">
+				<br class="visible-xs">
 				<a href="#portfolio" class="btn btn-default">View my work</a>
 			</p>
 
@@ -117,7 +119,13 @@ if (isset($this->data->designs)) :
 <section id="portfolio">
 <div class="container">
 
-	<h1>Some of my work</h1>
+	<div class="page-header">
+		<h1>
+			<small>samples</small><br>
+			Some of my work
+		</h1>
+	</div>
+
 
 
 	<div class="row">
@@ -196,7 +204,10 @@ if (isset($this->data->repos)) :
 
 
 	<div class="page-header">
-		<h1>My Open Source Projects</h1>
+		<h1>
+			<small>my recent..</small><br>
+			Open Source Work
+		</h1>
 	</div>
 
 
@@ -260,7 +271,7 @@ if (isset($this->data->repos)) :
 	<p></p>
 	<!-- Contributions -->
 	<div class="page-header">
-		<h4>Recently contributed to...</h4>
+		<h4>Also contributed to...</h4>
 	</div>
 
 	<div class="row">
@@ -396,7 +407,10 @@ if (isset($this->data->timeline)) :
 <div class="container">
 
 	<div class="page-header">
-		<h1>Highlights</h1>
+		<h1>
+			<small>Timeline</small><br>
+			Highlights so far
+		</h1>
 	</div>
 
 

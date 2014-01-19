@@ -33,7 +33,7 @@ $app->get_env = function() {
 
  	$enviroment = 'live';
 
-	if ($_SERVER['HTTP_HOST'] === 'localhost' || $_SERVER['HTTP_HOST'] === 'timm.local') {
+	if ($_SERVER['HTTP_HOST'] === 'localhost' || $_SERVER['HTTP_HOST'] === 'timm.local' || $_SERVER['HTTP_HOST'] === 'timms-macbook-air.local') {
 		$enviroment = 'dev';
 	}
 
@@ -240,7 +240,7 @@ $app->fetch_designs = function() {
 					ColoursCMS is a beautifully simple and powerful content management system, build on CakePHP.
 				</p>
 				<p>
-					I worked on ColoursCMS as concept creator and head of UI & UX. I worked both frontend and backend in the 2010–2013 timeframe.
+					I worked on ColoursCMS as concept creator, frontend & backend developer and head of UI & UX, in the 2010–2013 timeframe.
 				</p>",
 			),
 		// SPREK
@@ -456,7 +456,7 @@ $app->fetch_timeline = function () {
 		array(
 			'title' => 'Shipped first product',
 			'year' => 2004,
-			'description' => "My first major SaaS launch, this content management system is still in use by several major websites today.",
+			'description' => "My first major SaaS launch, the PublishOnline content management system is still in use by several major websites today.",
 			),
 		// array(
 		// 	'title' => 'Played the World Series of Poker',
@@ -467,13 +467,13 @@ $app->fetch_timeline = function () {
 		array(
 			'title' => 'Startup aquired',
 			'year' => 2007,
-			'description' => 'We joined Colours in building a dedicated team of industry experts, designers, developers, 3D artists and filmmakers. ',
+			'description' => 'We joined Colours in building a dedicated agency of industry experts, designers, developers, 3D artists and filmmakers. ',
 			'type' => 'jobchange',
 			),
 		array(
-			'title' => 'Met the most beautiful girl in the world',
+			'title' => 'Met the most awesome girl',
 			'year' => 2008,
-			'description' => 'She is totally awesome. Together, we have Marley, the greatest boston terrier in the world. <i class="fa fa-heart"></i>',
+			'description' => 'Together, we have Marley, the greatest boston terrier in the world. <i class="fa fa-heart"></i>',
 			'type' => 'personal',
 			),
 		array(
