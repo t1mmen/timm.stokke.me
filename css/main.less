@@ -102,14 +102,18 @@ body {
 	.clearfix();
 	font-family: @font-family-sans-serif;
 
+	// Animation properties:
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+
 	ul {
+		display: table;
 		padding: 0 15px;
 	}
 
 	li {
 		//margin-left: @grid-gutter-width;
-		display: inline-block;
-
+		display: table-cell;
 
 		a, span {
 			padding: 20px;
@@ -119,13 +123,11 @@ body {
 
 		a {
 			text-decoration: none;
-
 			&:hover {
 				color: #fff;
 				background: @link-color;
 			}
 		}
-
 
 		&:first-of-type a,
 		&:first-of-type span {
@@ -256,7 +258,7 @@ section,
 footer {
 
 	&.primary {
-		.brandSection(@brand-primary, #fff, darken(@brand-primary, 10%), darken(@brand-primary, 10%));
+		.brandSection(@brand-primary, #fff, darken(@brand-primary, 30%), darken(@brand-primary, 30%));
 	}
 	&.silver {
 		.brandSection(@gray-light, #111, #eee, @gray);
@@ -270,12 +272,12 @@ footer {
 		.brandSection(@brand-warning, #111, #111, @brand-warning);
 	}
 	&.success {
-		.brandSection(@brand-success, #fff, darken(@brand-success, 12%), @brand-success);
+		.brandSection(@brand-success, #fff, spin(darken(@brand-success, 12%), -5%), @brand-success);
 	}
 
 }
 
-.brandSection(@section-base-color, @text-color : #fff, @muted-color: #eee, @muted-color: #ccc) {
+.brandSection(@section-base-color, @text-color : #fff, @muted-color: #eee, @shadow-color: #ccc) {
 
 
 	border: 1px solid lighten(@section-base-color, 25%);
