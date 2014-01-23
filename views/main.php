@@ -46,7 +46,7 @@
  * SKILLS OVERVIEW
  * ****************************************************************** */
  ?>
-<section id="ido" class="primary">
+<section id="ido" class="info">
 <div class="container">
 
 	<div class="page-header">

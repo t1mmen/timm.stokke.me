@@ -7051,7 +7051,7 @@ section.info h6 i,
 footer.info h6 i,
 section.info p i,
 footer.info p i {
-  color: #76dcdc;
+  color: #269393;
 }
 section.info a:not(.btn),
 footer.info a:not(.btn) {
@@ -7059,11 +7059,11 @@ footer.info a:not(.btn) {
 }
 section.info .page-header,
 footer.info .page-header {
-  border-bottom-color: #76dcdc;
+  border-bottom-color: #269393;
 }
 section.info hr,
 footer.info hr {
-  border-top-color: #76dcdc;
+  border-top-color: #269393;
 }
 section.warning,
 footer.warning {
@@ -7211,7 +7211,7 @@ section.success h6 i,
 footer.success h6 i,
 section.success p i,
 footer.success p i {
-  color: #239a26;
+  color: #208e3f;
 }
 section.success a:not(.btn),
 footer.success a:not(.btn) {
@@ -7219,11 +7219,11 @@ footer.success a:not(.btn) {
 }
 section.success .page-header,
 footer.success .page-header {
-  border-bottom-color: #239a26;
+  border-bottom-color: #208e3f;
 }
 section.success hr,
 footer.success hr {
-  border-top-color: #239a26;
+  border-top-color: #208e3f;
 }
 footer {
   border-bottom: 1px solid #dddddd;

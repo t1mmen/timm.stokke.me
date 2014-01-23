@@ -93,6 +93,10 @@ $app->fetch_skills = function() {
 				'title' => 'Bootstrap 2 & 3',
 				'url' => 'http://getbootstrap.com',
 				),
+			array(
+				'title' => 'Handlebars.js',
+				'url' => 'http://handlebarsjs.com',
+				),
 			),
 		'Backend' => array(
 			array(
@@ -257,7 +261,7 @@ $app->fetch_designs = function() {
 			'description' => '
 				<p>
 					BT Sprek is a service for finding and taking hikes in and
-					around Bergen and Tromsø, Norway. Available
+					around Bergen and Trondheim, Norway. Available
 					<a target="_blank" href="http://tur.bt.no">on the web</a>,
 					<a target="_blank" href="https://itunes.apple.com/us/app/bt-sprek/id439293777?mt=8">IPhone</a> and
 					<a target="_blank" href="https://play.google.com/store/apps/details?id=no.appy.btsprek&hl=en">Android</a>
