@@ -1,7 +1,7 @@
 <?php
 // Load minimized stuff on live
-$css = 'css/main.min.css?v1';
-$script = 'js/main.min.js?v1';
+$css = 'css/main.min.css?v2';
+$script = 'js/main.min.js?v2';
 // But in dev, we need sourcemap & unminified JS
 if ($this->data->devEnviroment == 'dev') {
 	$css = 'css/main.css';
