@@ -241,10 +241,11 @@ $app->fetch_designs = function() {
 			'tease' => 'ColoursCMS is a beautifully simple and powerful content management system',
 			'description' => "
 				<p>
-					ColoursCMS is a beautifully simple and powerful content management system, build on CakePHP.
+					ColoursCMS \"is an extremely pleasant CMS to use\", according to
+					<a href='http://www.cmscritic.com/colours-cms-review/' target='_blank'>CRM Critic</a> (giving it 4/5 stars!)
 				</p>
 				<p>
-					I worked on ColoursCMS as concept creator, frontend & backend developer and head of UI & UX, in the 2010–2013 timeframe.
+					I worked on ColoursCMS as concept creator, frontend & backend developer and head of UI & UX, in the 2010–2014 timeframe.
 				</p>",
 			),
 		// SPREK
@@ -503,7 +504,7 @@ $app->fetch_timeline = function () {
 		array(
 			'title' => 'ColoursCMS grows up',
 			'year' => 2013,
-			'description' => 'Reviewers called it "<a href="http://www.cmscritic.com/colours-cms-review/" target="_blank">an extremely pleasant CMS to use</a>".',
+			'description' => '<a href="http://www.cmscritic.com/colours-cms-review/" target="_blank">CRM Critic loved it</a> (4/5!). "I immediately realised that I was in for an extremely easy ride. It all looked so clean and simple.", and, "an extremely pleasant CMS to use"',
 			'type' => 'personal',
 			),
 		array(

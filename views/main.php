@@ -120,11 +120,16 @@
 		</div>
 		<div class="col-md-9">
 
-			<p>
+			<p class="lead">
 				I <strong>love</strong> building things on the web, and knowing every moving part enables me to build and ship better.
-				I thrive when I get to work with <strong>passionate people</strong>. I have <strong>wide ranging experience</strong>
-				working in a full service agency setting.
+				I thrive when I get to work with <strong>passionate people</strong>.
+			</p>
 
+			<p>
+
+				I have <strong>wide ranging experience</strong> working in a full service agency setting,
+				but my real <strong>passion</strong> lies in building and maintaining webapps and services that <strong>solve real
+				problems</strong>.
 			</p>
 
 		</div>
