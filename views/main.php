@@ -26,7 +26,7 @@
 			</p>
 
 			<p>
-				<a href="#contact" class="btn btn-success">Let's talk</a>
+				<a href="#contact" class="btn btn-success">Hire me</a>
 				&nbsp;
 				<br class="visible-xs">
 				<br class="visible-xs">
