@@ -379,21 +379,36 @@ $app->fetch_repos = function () {
 $app->fetch_github_events = function () {
 
 	// Set up cache:
-	$key = FileSystemCache::generateCacheKey('github_events');
+	$key = FileSystemCache::generateCacheKey('github_events_multipage');
 	$events = FileSystemCache::retrieve($key);
 
 	// If no cache found:
 	if ($events === false) {
 
-		// Fetch from API
+		// Fetch all event pages (since this is the only way we can track contributions atm)
+		$numApiRequests = 10; // = 1000 items max
+		$limit = 30; // Max results pr page
+		$events = array();
+
+		// Request building:
 		$headers = array('Accept' => 'application/json');
 		$options = array('User-Agent' => 't1mmen');
-		$response = Requests::get('https://api.github.com/users/t1mmen/events', $headers, $options);
 
-   		$events = json_decode($response->body, true);
+		// Fetch items from API (multiple times, if required)
+		for ($i = 1; $i < $numApiRequests; $i++) {
 
-		// Store cache:
-		FileSystemCache::store($key, $events, 3600);
+			// Fetch from API
+			$response = Requests::get('https://api.github.com/users/t1mmen/events?page='.$i, $headers, $options);
+	   		$body = json_decode($response->body, true);
+	   		$events = array_merge($body, $events);
+
+			// If the API returns less than $limit results, we have all results. Abort.
+			if ($body < $limit) {
+				break;
+			}
+		}
+
+		FileSystemCache::store($key, $events, 3600*24);
 	}
 
 	// Order Github events:
