@@ -26,7 +26,7 @@
 			</p>
 
 			<p>
-				<a href="#contact" class="btn btn-success">Hire me</a>
+				<a href="#contact" class="btn btn-info">Hire me</a>
 				&nbsp;
 				<br class="visible-xs">
 				<br class="visible-xs">
@@ -46,7 +46,7 @@
  * SKILLS OVERVIEW
  * ****************************************************************** */
  ?>
-<section id="ido" class="info">
+<section id="ido" class="success">
 <div class="container">
 
 	<div class="page-header">
@@ -120,7 +120,7 @@
 		</div>
 		<div class="col-md-9">
 
-			<p class="lead">
+			<p>
 				I <strong>love</strong> building things on the web, and knowing every moving part enables me to build and ship better.
 				I thrive when I get to work with <strong>passionate people</strong>.
 			</p>
