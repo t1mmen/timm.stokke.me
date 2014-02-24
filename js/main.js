@@ -21,6 +21,18 @@ $(document).ready(function() {
 		}
 	});
 
+	// Attempt to track link clicls:
+	$('a').click(function(e) {
+
+		var $this = $(this),
+			href = $this.attr('href');
+
+		// Send to GA:
+		ga('send', 'Clicks', 'Visits', href);
+		_gaq.push(['_trackEvent', 'Clicks', 'Visit', href]);
+
+	});
+
 	// Generic "show element" style snippet
 	// todo: http://visionmedia.github.io/move.js/
 	$('.js-expand').click(function(e){
