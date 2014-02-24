@@ -164,8 +164,16 @@ $app->fetch_skills = function() {
 				'url' => 'http://en.wikipedia.org/wiki/Representational_state_transfer',
 				),
 			),
-		'Tools' => array(
+		'Tools & DevOps' => array(
 
+			array(
+				'title' => 'Vagrant',
+				'url' => 'http://www.vagrantu.com/',
+				),
+			array(
+				'title' => 'PuPHPet',
+				'url' => 'http://www.puphpet.com',
+				),
 			array(
 				'title' => 'Composer',
 				'url' => 'http://getcomposer.org',
