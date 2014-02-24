@@ -28,7 +28,6 @@ $(document).ready(function() {
 			href = $this.attr('href');
 
 		// Send to GA:
-		ga('send', 'Clicks', 'Visits', href);
 		_gaq.push(['_trackEvent', 'Clicks', 'Visit', href]);
 
 	});
