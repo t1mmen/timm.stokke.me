@@ -205,8 +205,16 @@ $app->fetch_skills = function() {
 				'url' => 'http://hipchat.com',
 				),
 			array(
+				'title' => '#Slack',
+				'url' => 'http://slack.com',
+				),
+			array(
 				'title' => 'Leankit',
 				'url' => 'http://leankit.com',
+				),
+			array(
+				'title' => 'Breeze.pm',
+				'url' => 'http://breeze.pm',
 				),
 			array(
 				'title' => 'Sprint.ly',
