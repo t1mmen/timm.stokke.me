@@ -32,6 +32,12 @@ $(document).ready(function() {
 
 	});
 
+	// Track how far the user scrolls
+	// http://scrolldepth.parsnip.io/
+	$.scrollDepth({
+		minHeight: 2000
+	});
+
 	// Generic "show element" style snippet
 	// todo: http://visionmedia.github.io/move.js/
 	$('.js-expand').click(function(e){

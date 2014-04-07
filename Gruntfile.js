@@ -38,6 +38,7 @@ module.exports = function(grunt) {
 					'bower_components/owlcarousel/owl-carousel/owl.carousel.min.js',
 					'bower_components/headroom.js/dist/headroom.min.js',
 					'bower_components/headroom.js/dist/jQuery.headroom.min.js',
+					'bower_components/jquery-scrolldepth/jquery.scrolldepth.min.js',
 					'js/main.js'  // All local JS files
 				],
 				dest: 'js/build/main.concat.js',
