@@ -90,6 +90,10 @@ $app->fetch_skills = function() {
 				'url' => 'http://en.wikipedia.org/wiki/Javascript',
 				),
 			array(
+				'title' => 'AngularJS',
+				'url' => 'https://angularjs.org/',
+				),
+			array(
 				'title' => 'Bootstrap 2 & 3',
 				'url' => 'http://getbootstrap.com',
 				),
