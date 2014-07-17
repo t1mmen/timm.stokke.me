@@ -17,16 +17,7 @@ module.exports = function(grunt) {
 						src: ['bower_components/font-awesome/fonts/*'],
 						dest: 'fonts/',
 						filter: 'isFile'
-					},
-					// Rename .css to .less to parse instead of @import.
-					{
-						expand: true,
-						src: ['bower_components/animate.css/animate.min.css'],
-						dest: 'bower_components/animate.css/',
-						rename: function(dest, src) {
-							return dest + 'animate.less'
-						}
-					},
+					}
 				]
 			}
 		},
@@ -64,7 +55,7 @@ module.exports = function(grunt) {
 		},
 		// Compile CSS
 		less: {
-			development: {
+			build: {
 				options: {
 					paths: ['css'],
 					sourceMap : true
@@ -72,14 +63,28 @@ module.exports = function(grunt) {
 				files: {
 					'css/main.css': 'css/main.less'
 				}
-			},
-			production: {
-				options: {
-					paths: ['css'],
-					cleancss : true
-				},
+			}
+		},
+		// Clean unused CSSS
+		uncss: {
+			dist: {
 				files: {
-					'css/main.min.css': 'css/main.less'
+					'css/main.css' : 'views/main.php',
+				},
+				options: {
+					urls: ['http://localhost/timm.stokke.me/index.php?setenv=live'],
+					ignore: ['animate', 'flipInX', 'flipOutX', 'slideInDown', 'slideOutUp', 'slideInLeft', 'slideOutLeft'],
+					report: 'min' // optional: include to report savings
+				}
+			}
+		},
+		cssmin: {
+			combine: {
+				files: {
+					'css/main.min.css': ['css/main.css']
+				},
+				options: {
+					report: 'min' // optional: include to report savings
 				}
 			}
 		},
@@ -118,8 +123,19 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-uncss');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-	// 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-	grunt.registerTask('default', ['copy', 'concat', 'uglify', 'imagemin', 'less', 'watch']);
+
+	grunt.registerTask('default', ['concat', 'uglify', 'less', 'watch']);
+
+	grunt.registerTask('dist', [
+		'copy',
+		'concat',
+		'uglify',
+		'imagemin',
+		'less',
+		// 'uncss', // Needs this fixed: https://github.com/addyosmani/grunt-uncss/issues/114
+		'cssmin']);
 
 };

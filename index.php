@@ -33,7 +33,9 @@ $app->get_env = function() {
 
  	$enviroment = 'live';
 
-	if ($_SERVER['HTTP_HOST'] === 'localhost' || $_SERVER['HTTP_HOST'] === 'timm.local' || $_SERVER['HTTP_HOST'] === 'timms-macbook-air.local') {
+ 	if (isset($_GET['setenv'])) {
+ 		$enviroment = $_GET['setenv'];
+ 	} elseif ($_SERVER['HTTP_HOST'] === 'localhost' || $_SERVER['HTTP_HOST'] === 'timm.local' || $_SERVER['HTTP_HOST'] === 'timms-macbook-air.local') {
 		$enviroment = 'dev';
 	}
 
