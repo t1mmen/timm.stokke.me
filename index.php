@@ -386,7 +386,7 @@ $app->fetch_repos = function () {
 	krsort($orderedRepos);
 
 	// Only show most recent ones...
-	$orderedRepos = array_slice($orderedRepos, 0, 3);
+	$orderedRepos = array_slice($orderedRepos, 0, 6);
 
 	return $orderedRepos;
 };
