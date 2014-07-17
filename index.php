@@ -258,7 +258,7 @@ $app->fetch_designs = function() {
 			'description' => "
 				<p>
 					ColoursCMS \"is an extremely pleasant CMS to use\", according to
-					<a href='http://www.cmscritic.com/colours-cms-review/' target='_blank'>CRM Critic</a> (giving it 4/5 stars!)
+					<a href='http://www.cmscritic.com/colours-cms-review/' target='_blank'>CMS Critic</a> (giving it 4/5 stars!)
 				</p>
 				<p>
 					I worked on ColoursCMS as concept creator, frontend & backend developer and head of UI & UX, in the 2010–2014 timeframe.
