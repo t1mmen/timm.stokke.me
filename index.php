@@ -462,7 +462,7 @@ $app->fetch_github_events = function () {
 			'stargazers_count' => $event['payload']['pull_request']['base']['repo']['stargazers_count'],
 			'watchers_count' => $event['payload']['pull_request']['base']['repo']['watchers_count'],
 			'forks' => $event['payload']['pull_request']['base']['repo']['forks'],
-			'homepage' => 'http://github.com/'.$event['repo']['name'].'/pulls/'.$event['payload']['pull_request']['number'],
+			'pull_request_url' => $event['payload']['pull_request']['html_url'],
 			'updated_timestamp' => $timestamp,
 		);
 
