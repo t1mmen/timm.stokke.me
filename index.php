@@ -535,7 +535,7 @@ $app->fetch_timeline = function () {
 			),
 		array(
 			'title' => 'Moving to Canada',
-			'year' => 2014,
+			'year' => 2015,
 			'description' => "I'm not quite sure what I'll be doing, though. <a href='#contact'>Should we talk?</a>"
 			),
 		);
