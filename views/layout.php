@@ -1,12 +1,15 @@
 <?php
-// Load minimized stuff on live
-$css = 'css/main.min.css?v2';
-$script = 'js/main.min.js?v2';
-// But in dev, we need sourcemap & unminified JS
 if ($this->data->devEnviroment == 'dev') {
-	$css = 'css/main.css';
-	$script = 'js/build/main.concat.js';
+	$prefix = '/timm.stokke.me/';
+	$postfix = '';
+} else {
+	$prefix = '/';
+	$postfix = '.min';
 }
+
+$css = $prefix.'css/main'.$postfix.'.css?v3';
+$script = $prefix.'js/main'.$postfix.'.js?v3';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,48 +25,6 @@ if ($this->data->devEnviroment == 'dev') {
 	</head>
 	<body>
 
-
-		<header id="headroom" class="headroom slideOutUp">
-			<div class="container">
-				<div class="row">
-
-
-
-					<!-- menu -->
-					<ul class="pull-left hidden-xs">
-						<li>
-							<span>Timm Stokke</span>
-						</li>
-					</ul>
-
-					<!-- menu -->
-					<ul class="pull-right">
-						<li>
-							<a href="#hello">
-								Hi
-							</a>
-						</li>
-						<li>
-							<a href="#portfolio">
-								Portfolio
-							</a>
-						</li>
-						<li>
-							<a href="#employment-history">
-								History
-							</a>
-						</li>
-						<li>
-							<a href="#contact">
-								Contact
-							</a>
-						</li>
-					</ul>
-					<!-- end menu -->
-
-				</div>
-			</div>
-		</header>
 
 		<?php
 		// Load view:

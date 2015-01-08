@@ -27,6 +27,15 @@ $app->get('/', function () use ($app, $config) {
 	));
 });
 
+$app->get('/wants-to-work-for/:company', function ($company) use ($app, $config) {
+
+	$app->render('work-for.php', array(
+		'devEnviroment' => $app->get_env,
+		'company' => $company,
+	));
+
+});
+
 
 // Enviroment check:
 $app->get_env = function() {
