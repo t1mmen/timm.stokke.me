@@ -72,7 +72,7 @@ module.exports = function(grunt) {
 					'css/main.css' : 'views/main.php',
 				},
 				options: {
-					urls: ['http://localhost/timm.stokke.me/index.php?setenv=live'],
+					urls: ['http://localhost/timm.stokke.me/index.php?setenv=dev'],
 					ignore: ['animate', 'flipInX', 'flipOutX', 'slideInDown', 'slideOutUp', 'slideInLeft', 'slideOutLeft'],
 					report: 'min' // optional: include to report savings
 				}
@@ -135,7 +135,7 @@ module.exports = function(grunt) {
 		'uglify',
 		'imagemin',
 		'less',
-		// 'uncss', // Needs this fixed: https://github.com/addyosmani/grunt-uncss/issues/114
+		'uncss',
 		'cssmin']);
 
 };
