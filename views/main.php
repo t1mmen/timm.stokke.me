@@ -51,7 +51,7 @@
  * INTRO
  * ****************************************************************** */
  ?>
-<section id="hello" style="padding-top: 50px;">
+<section id="hello" style="padding-top: 90px;">
 <div class="container">
 
 	<div class="row">

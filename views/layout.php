@@ -22,6 +22,8 @@ $script = $prefix.'js/main'.$postfix.'.js?v3';
 		<link rel="stylesheet" href="<?php echo $css; ?>">
 		<link rel="author" href="https://plus.google.com/107766367797089659313">
 		<link rel="canonical" href="http://timm.stokke.me">
+		<link rel="shortcut icon" href="<?php echo $prefix; ?>favicon.ico" type="image/x-icon">
+		<link rel="icon" href="<?php echo $prefix; ?>favicon.ico" type="image/x-icon">
 	</head>
 	<body>
 

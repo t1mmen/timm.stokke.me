@@ -3,7 +3,6 @@ include_once('./config.php');
 include_once('./lib/utils.php');
 require_once('./vendor/autoload.php');
 
-
 $app = new \Slim\Slim(array(
 	'view' => '\Slim\LayoutView',
 	'layout' => 'layout.php',
@@ -261,6 +260,26 @@ $app->fetch_skills = function() {
 // Designs/portfolio
 $app->fetch_designs = function() {
 	$designs = array(
+		// GotDone
+		array(
+			'thumbnail' => false,
+			'media' => array(
+				'img/projects/gotdone1.png',
+				'img/projects/gotdone2.png',
+				),
+			'client' => 'Myself',
+			'project_name' => 'GotDone',
+			'url' => 'https://app.gotdone.me',
+			'disciplines' => array('concept', 'design', 'frontend', 'backend'),
+			'tease' => 'Painless time, todo & activity tracking',
+			'description' => "
+				<p>
+					Log hours based on the work you do. Discussions had, tasks completed, emails sent and meetings attended all come together in GotDone.
+				</p>
+				<p>
+					I built and launched GotDone (beta) entirely on my own in 2014, using AngularJS, CakePHP (RESTful API) and Iron.io workers.
+				</p>",
+			),
 		// ColoursCMS
 		array(
 			'thumbnail' => false,
@@ -328,20 +347,20 @@ $app->fetch_designs = function() {
 				</p>',
 			),
 		// RGROUP
-		array(
-			'media' => array(
-				'img/projects/rgroup.jpg',
-				),
-			'client' => 'Randaberg Group',
-			'project_name' => 'Responsive redesign',
-			'url' => 'http://www.rgroup.no',
-			'disciplines' => array(),
-			'tease' => '',
-			'description' => "
-				<p>
-					Randaberg Group offers a wide array of products and services in steel production and protection for subsea and storage
-				</p>",
-			),
+		// array(
+		// 	'media' => array(
+		// 		'img/projects/rgroup.jpg',
+		// 		),
+		// 	'client' => 'Randaberg Group',
+		// 	'project_name' => 'Responsive redesign',
+		// 	'url' => 'http://www.rgroup.no',
+		// 	'disciplines' => array(),
+		// 	'tease' => '',
+		// 	'description' => "
+		// 		<p>
+		// 			Randaberg Group offers a wide array of products and services in steel production and protection for subsea and storage
+		// 		</p>",
+		// 	),
 		);
 
 	return $designs;
@@ -543,9 +562,15 @@ $app->fetch_timeline = function () {
 			'type' => 'personal',
 			),
 		array(
+			'title' => 'Launched sideproject',
+			'year' => 2014,
+			'description' => 'Built and launched GotDone (beta), an single page app to track & log hours based on work completed across services like Github, Basecamp, Google Apps and more. Powered by AngularJS and a RESTful backend built on CakePHP.',
+			'type' => 'personal',
+			),
+		array(
 			'title' => 'Moving to Canada',
 			'year' => 2015,
-			'description' => "I'm not quite sure what I'll be doing, though. <a href='#contact'>Should we talk?</a>"
+			'description' => "Permanent resident card in hard, I'm ready for new challenges and opportunities in Calgary, Edmonton or remotely. <a href='#contact'>Should we talk?</a>"
 			),
 		);
 	return $timeline;

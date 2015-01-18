@@ -30,9 +30,9 @@ module.exports = function(grunt) {
 					'bower_components/headroom.js/dist/headroom.min.js',
 					'bower_components/headroom.js/dist/jQuery.headroom.min.js',
 					'bower_components/jquery-scrolldepth/jquery.scrolldepth.min.js',
-					'js/main.js'  // All local JS files
+					'js/app.js'  // All local JS files
 				],
-				dest: 'js/build/main.concat.js',
+				dest: 'js/main.js',
 			}
 		},
 		// Minimize JS

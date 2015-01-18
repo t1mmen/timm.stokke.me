@@ -8,7 +8,7 @@
     "animate.css": "~3",
     "owlcarousel":"~1.3",
     "jquery-waypoints":"~2",
-    "headroom.js" : "~0.4",
+    "headroom.js" : "~0.7",
     "jquery-scrolldepth":"https://github.com/robflaherty/jquery-scrolldepth.git"
   },
   "devDependencies": {}
