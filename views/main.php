@@ -148,7 +148,7 @@
 				Backend
 			</h3>
 			<p>
-				I work on the LAMP stack. CakePHP has been my go-to framework the last 5 years.
+				I currently work on the LAMP stack. CakePHP has been my go-to framework for the past 6 years.
 			</p>
 
 		</div>
