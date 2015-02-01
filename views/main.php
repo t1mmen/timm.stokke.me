@@ -74,7 +74,7 @@
 			</p>
 
 			<p>
-				<a href="#contact" class="btn btn-info">Hire me</a>
+				<a href="#contact" class="btn btn-info">Contact me</a>
 				&nbsp;
 				<br class="visible-xs">
 				<br class="visible-xs">

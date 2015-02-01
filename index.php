@@ -570,7 +570,6 @@ $app->fetch_timeline = function () {
 		array(
 			'title' => 'Moving to Canada',
 			'year' => 2015,
-			'description' => "Permanent resident card in hard, I'm ready for new challenges and opportunities in Calgary, Edmonton or remotely. <a href='#contact'>Should we talk?</a>"
 			),
 		);
 	return $timeline;
