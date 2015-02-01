@@ -54,17 +54,23 @@ $app->get_env = function() {
 $app->fetch_jobs = function() {
 	$jobs = array(
 		array(
-			'timeframe' => '2011 - now',
-			'company' => 'Colours AS',
-			'title' => 'UI & UX Developer',
-			'url' => 'http://colours.no',
+			'timeframe' => '2015 - now',
+			'company' => 'ICEsoft Technologies',
+			'title' => 'Senior Developer',
+			'url' => 'http://www.icesoft.org/',
 			),
 		array(
-			'timeframe' => '2007 - 2011',
+			'timeframe' => '2007 - 2015',
 			'company' => 'Colours AS',
-			'title' => 'Senior Developer',
+			'title' => 'UI & UX Designer / Senior Developer',
 			'url' => 'http://colours.no',
 			),
+		// array(
+		// 	'timeframe' => '2007 - 2011',
+		// 	'company' => 'Colours AS',
+		// 	'title' => 'Senior Developer',
+		// 	'url' => 'http://colours.no',
+		// 	),
 		array(
 			'timeframe' => '2001 - 2007',
 			'company' => 'Aspekt AS',
