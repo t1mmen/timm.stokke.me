@@ -55,9 +55,9 @@ $app->fetch_jobs = function() {
 	$jobs = array(
 		array(
 			'timeframe' => '2015 - now',
-			'company' => 'ICEsoft Technologies',
-			'title' => 'Senior Developer',
-			'url' => 'http://www.icesoft.org/',
+			'company' => 'Volinspire Community Corp',
+			'title' => 'Senior Web Developer',
+			'url' => 'http://www.volinspire.com',
 			),
 		array(
 			'timeframe' => '2007 - 2015',
@@ -108,6 +108,10 @@ $app->fetch_skills = function() {
 			array(
 				'title' => 'AngularJS',
 				'url' => 'https://angularjs.org/',
+				),
+			array(
+				'title' => 'ReactJS & Flux',
+				'url' => 'http://facebook.github.io/react/',
 				),
 			array(
 				'title' => 'Bootstrap 2 & 3',
@@ -574,7 +578,8 @@ $app->fetch_timeline = function () {
 			'type' => 'personal',
 			),
 		array(
-			'title' => 'Moving to Canada',
+			'title' => 'Moved to B.C, Canada',
+			'description' => 'Our family of four (now <em>two</em> awesome Boston Terriers) set out on our greatest adventure yet!',
 			'year' => 2015,
 			),
 		);

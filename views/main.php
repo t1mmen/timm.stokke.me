@@ -136,7 +136,7 @@
 				<i class="fa fa-code fa-3x text-muted"></i><br>
 				Frontend
 			</h3>
-			<p>I am fluent in HTML, CSS and jQuery. I'm currently neck deep in AngularJS.</p>
+			<p>I am fluent frontendin HTML, CSS and JS, including AngularJS and React.</p>
 
 
 		</div>
