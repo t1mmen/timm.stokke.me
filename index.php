@@ -114,6 +114,10 @@ $app->fetch_skills = function() {
 				'url' => 'http://facebook.github.io/react/',
 				),
 			array(
+				'title' => 'EmberJS & EmberCLI',
+				'url' => 'https://emberjs.com/',
+				),
+			array(
 				'title' => 'Bootstrap 2 & 3',
 				'url' => 'http://getbootstrap.com',
 				),
@@ -287,7 +291,7 @@ $app->fetch_designs = function() {
 					Log hours based on the work you do. Discussions had, tasks completed, emails sent and meetings attended all come together in GotDone.
 				</p>
 				<p>
-					I built and launched GotDone (beta) entirely on my own in 2014, using AngularJS, CakePHP (RESTful API) and Iron.io workers.
+					I built and launched GotDone entirely on my own in 2014, using AngularJS, CakePHP (RESTful API) and Iron.io workers.
 				</p>",
 			),
 		// ColoursCMS
