@@ -136,8 +136,7 @@
 				<i class="fa fa-code fa-3x text-muted"></i><br>
 				Frontend
 			</h3>
-			<p>I am fluent frontendin HTML, CSS and JS, including AngularJS and React.</p>
-
+			<p>I am fluent in HTML, CSS and JS, including ReactJS/Flux and AngularJS 1.x</p>
 
 		</div>
 		<div class="col-md-3 col-sm-6 col-xs-12">
