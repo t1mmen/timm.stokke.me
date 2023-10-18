@@ -59,13 +59,13 @@ function formatDate(date: string) {
     formattedDate = 'Today';
   }
 
-  const fullDate = targetDate.toLocaleString('en-us', {
+  const fullDate = targetDate.toLocaleString('en-US', {
     month: 'long',
     day: 'numeric',
     year: 'numeric',
   });
 
-  return `${fullDate} (${formattedDate})`;
+  return `${fullDate} (${formattedDate}) ${JSON.stringify(targetDate)}`;
 }
 
 export default async function Blog({ params }) {

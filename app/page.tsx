@@ -1,19 +1,15 @@
 import Image from 'next/image';
 import avatar from 'app/avatar.png';
 import timelySvg from 'public/images/timely.svg';
-
-import { Suspense } from 'react';
 import Text from './components/text';
 
-function Badge(props) {
-  return (
-    <a
-      {...props}
-      target="_blank"
-      className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline gap-1"
-    />
-  );
-}
+// Pics of me..
+import inCanada from 'public/images/frontpage/in-canada.jpg';
+import rideHoses from 'public/images/frontpage/ride-horses.jpg';
+import exploreStuff from 'public/images/frontpage/explore-stuff.jpg';
+import talkOnTheFruit from 'public/images/frontpage/talk-on-the-fruit.jpg';
+import indyTime from 'public/images/frontpage/d-o-double-g.jpg';
+import teddyTime from 'public/images/frontpage/d-o-double-gg.jpg';
 
 function ArrowIcon() {
   return (
@@ -45,25 +41,28 @@ async function BlogLink({ slug, name }) {
 export default async function Page() {
   return (
     <section>
-      <Text.H size="1">Hi, I'm Timm 👋</Text.H>
+      <Text.H size="1">👋 Hi, I'm Timm</Text.H>
       <Text.Prose>
         <Text.Lead>
-          I've been passionately building websites, services and apps for web & mobile devices since
-          1997.
+          I've been passionately building apps, services and websites across desktop & mobile
+          devices since 1997.
         </Text.Lead>
         <Text.P>
-          For the past 7 years, I've been wearing a multitude of hats at{' '}
-          <Badge href="https://www.timelyapp.com">
+          For the past {new Date().getFullYear() - 2016} years, I've been wearing a multitude of
+          hats at{' '}
+          <Text.BoldA href="https://www.timelyapp.com">
             <Image src={timelySvg} alt="Timely" height={12} /> Timely
-          </Badge>
+          </Text.BoldA>
           , the time tracker for people that hate and/or suck at time tracking.
         </Text.P>
       </Text.Prose>
-      <div className="columns-2 sm:columns-3 gap-4 my-8">
+      <br />
+      <Text.H size="3">Several photos exist of me</Text.H>
+      <div className="columns-2 sm:columns-3 gap-4 my-8 mt-4">
         <div className="relative h-40 mb-4">
           <Image
             alt="todo"
-            src={avatar}
+            src={indyTime}
             fill
             sizes="(max-width: 768px) 213px, 33vw"
             priority
@@ -72,8 +71,8 @@ export default async function Page() {
         </div>
         <div className="relative h-80 mb-4 sm:mb-0">
           <Image
-            alt="todo"
-            src={avatar}
+            alt="Explore stuff"
+            src={exploreStuff}
             fill
             sizes="(max-width: 768px) 213px, 33vw"
             priority
@@ -83,7 +82,7 @@ export default async function Page() {
         <div className="relative h-40 sm:h-80 sm:mb-4">
           <Image
             alt="todo"
-            src={avatar}
+            src={talkOnTheFruit}
             fill
             sizes="(max-width: 768px) 213px, 33vw"
             priority
@@ -92,8 +91,8 @@ export default async function Page() {
         </div>
         <div className="relative h-40 mb-4 sm:mb-0">
           <Image
-            alt="todo"
-            src={avatar}
+            alt="Ride hoses"
+            src={rideHoses}
             fill
             sizes="(max-width: 768px) 213px, 33vw"
             priority
@@ -103,7 +102,7 @@ export default async function Page() {
         <div className="relative h-40 mb-4">
           <Image
             alt="todo"
-            src={avatar}
+            src={teddyTime}
             fill
             sizes="(max-width: 768px) 213px, 33vw"
             priority
@@ -112,8 +111,8 @@ export default async function Page() {
         </div>
         <div className="relative h-80">
           <Image
-            alt="todo"
-            src={avatar}
+            alt="Exist in nature"
+            src={inCanada}
             fill
             sizes="(min-width: 768px) 213px, 33vw"
             priority
@@ -137,7 +136,7 @@ export default async function Page() {
         <div>
           <Text.H size="3">📢 Communicator</Text.H>
           <Text.P>
-            I'm a strong communicator and love to share my knowledge and experience with others.
+            I'm a strong communicator, and love to share knowledge and experiences with others.
           </Text.P>
         </div>
         <div>
@@ -167,12 +166,12 @@ export default async function Page() {
           </Text.P>
         </div>
       </div>
-      <Text.H size="3">Recent writings include...</Text.H>
+      {/* <Text.H size="3">Recent writings include...</Text.H>
       <div className="my-4 mb-8 flex flex-col w-full">
         <BlogLink name="Hello World" slug="hello-world" />
-      </div>
+      </div> */}
 
-      <Text.H size="3">Find me places...</Text.H>
+      <Text.H size="2">Find me places</Text.H>
       <ul className="flex flex-col md:flex-row space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-sm text-neutral-600 dark:text-neutral-300">
         <li>
           <Text.A external href="mailto:timm@stokke.me?subject=Hi Timm!">

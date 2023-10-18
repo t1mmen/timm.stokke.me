@@ -49,6 +49,17 @@ const A = ({ children, external = true, ...rest }) => {
   );
 };
 
+function BoldA({ external = true, ...rest }) {
+  const attrs = external ? { rel: 'noopener noreferrer', target: '_blank' } : ``;
+  return (
+    <a
+      {...attrs}
+      {...rest}
+      className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline gap-1 hover:bg-sky-400 hover:border-sky-600 hover:bg-opacity-10 transition-all"
+    />
+  );
+}
+
 type HProps = HTMLAttributes<HTMLElement> & {
   size: '1' | '2' | '3' | '4' | '5' | '6';
 };
@@ -85,6 +96,7 @@ const Text = {
   Prose,
   Lead,
   A,
+  BoldA,
   P,
   H,
 };
