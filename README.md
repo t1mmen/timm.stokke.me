@@ -1,27 +1,7 @@
-timm.stokke.me
-==============
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fleerob%2Fleerob.io)
 
-My personal homepage
+# timm.stokke.me
 
+... because the `@todo` I've hosted there for 7 years was getting embarrassing.
 
-### Install & build process:
-
-```
-mkdir homepage
-cd homepage
-git checkout https://github.com/t1mmen/timm.stokke.me.git
-```
-
-If you want to build the project, you also need to install the [Bower](http://bower.io/)
-components & [Grunt.js](http://gruntjs.com/) dependencies.
-
-```
-bower install
-npm install
-```
-
-And finally, build the project:
-
-```
-grunt
-```
+Starting point borrows heavily from [leerob](https://github.com/leerob/leerob.io), because I initially just needed a quick way to get a blog up and running. I'll be changing it up as I go along.
