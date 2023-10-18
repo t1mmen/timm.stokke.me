@@ -5,7 +5,6 @@ import Text from 'app/components/text';
 export default function Comments() {
   return (
     <div className="mt-8 mb-8">
-      <Text.H size="3">Got thoughts?</Text.H>
       <Giscus
         repo="t1mmen/timm.stokke.me"
         repoId="MDEwOlJlcG9zaXRvcnkxNTE3Nzk5Ng=="
