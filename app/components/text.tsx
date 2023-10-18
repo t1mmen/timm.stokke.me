@@ -1,24 +1,8 @@
 import clsx from 'clsx';
+import Link from 'next/link';
 import React from 'react';
 import { HTMLAttributes } from 'react';
-
-function ArrowIcon(props) {
-  return (
-    <svg
-      width="12"
-      height="12"
-      viewBox="0 0 12 12"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
-      <path
-        d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
-        fill="currentColor"
-      />
-    </svg>
-  );
-}
+import { ArrowLinkIcon } from './icons';
 
 const Prose = props => {
   const className = clsx('rose prose-neutral dark:prose-invert', props.className);
@@ -35,17 +19,18 @@ const Lead = props => {
   return <p {...props} className={className} />;
 };
 
-const A = ({ children, external = true, ...rest }) => {
+const A = ({ children, external = true, href, ...rest }) => {
   const className = clsx(
-    'flex items-center hover:text-neutral-800 dark:hover:text-neutral-100 transition-all',
+    'inline-flex items-center hover:text-sky-600 dark:hover:text-neutral-100 transition-all hover:underline',
     rest.className
   );
   const attrs = external ? { rel: 'noopener noreferrer', target: '_blank' } : ``;
+  const Component = external ? 'a' : Link;
   return (
-    <a {...attrs} {...rest} className={className}>
-      {!!external && <ArrowIcon className="mr-2" />}
+    <Component href={href} {...attrs} {...rest} className={className}>
       {children}
-    </a>
+      {!!external && <ArrowLinkIcon className="ml-1 mr-2" />}
+    </Component>
   );
 };
 

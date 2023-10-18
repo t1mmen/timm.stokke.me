@@ -22,22 +22,6 @@ function ArrowIcon() {
   );
 }
 
-async function BlogLink({ slug, name }) {
-  return (
-    <a
-      href={`/blog/${slug}`}
-      className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded flex items-center justify-between px-3 py-4 w-full hover:bg-sky-400 hover:border-sky-600 hover:bg-opacity-10 transition-all"
-    >
-      <div className="flex flex-col">
-        <p className="font-bold text-neutral-900 dark:text-neutral-100">{name}</p>
-      </div>
-      <div className="text-neutral-700 dark:text-neutral-300">
-        <ArrowIcon />
-      </div>
-    </a>
-  );
-}
-
 export default async function Page() {
   return (
     <section>
@@ -57,7 +41,7 @@ export default async function Page() {
         </Text.P>
       </Text.Prose>
       <br />
-      <Text.H size="3">Several photos exist of me</Text.H>
+      <Text.H size="2">Several photos of me exist</Text.H>
       <div className="columns-2 sm:columns-3 gap-4 my-8 mt-4">
         <div className="relative h-40 mb-4">
           <Image
@@ -121,42 +105,44 @@ export default async function Page() {
         </div>
       </div>
       <Text.H size="2">I know some things</Text.H>
-      <Text.P>
-        I've been {new Date().getFullYear() - 2001}+ years in the business, so the toolbox is pretty
-        stacked...
+      <Text.P className="mb-8">
+        I've spent {new Date().getFullYear() - 2001}+ years in the business, and picked up a thing
+        or two along the way...
       </Text.P>
-
-      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 mb-8">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 mb-8">
         <div>
-          <Text.H size="3">🧭 Leader</Text.H>
+          <Text.H size="3">🧭 Leadership</Text.H>
           <Text.P>
-            I thrive when leading and mentoring individuals and teams. Just don't call me a manager.
+            I thrive when leading and mentoring individuals and teams towards a worthy goal. Just
+            don't call me a manager.
           </Text.P>
         </div>
         <div>
-          <Text.H size="3">📢 Communicator</Text.H>
+          <Text.H size="3">📢 Communication</Text.H>
           <Text.P>
-            I'm a strong communicator, and love to share knowledge and experiences with others.
+            I'm a strong communicator, and love to share knowledge, experiences, and wisdom with
+            others.
           </Text.P>
         </div>
         <div>
-          <Text.H size="3">💡 Concepts</Text.H>
+          <Text.H size="3">💡 Concept Creation</Text.H>
           <Text.P>
-            From a napkin drawings to interactive mockups, I work efficiently in the idea, concept,
-            and prototyping stages.
+            From a napkin drawings to interactive mockups. I work efficiently through the idea,
+            concept, and prototyping stages.
           </Text.P>
         </div>
         <div>
           <Text.H size="3">🧑‍🎨 UX & Design</Text.H>
           <Text.P>
-            I love designing exceptional user experiences and interfaces. Web is my preferred
+            Designing exceptional user experiences and interfaces is my jam. Web is my preferred
             interface.
           </Text.P>
         </div>
         <div>
           <Text.H size="3">💻 Frontend</Text.H>
           <Text.P>
-            Bringing ideas to life is my favorite. I'm fluent in everything web & client-side.
+            Bringing ideas to life is where I spend most of my time. I'm fluent in everything web &
+            client-side.
           </Text.P>
         </div>
         <div>
@@ -166,10 +152,25 @@ export default async function Page() {
           </Text.P>
         </div>
       </div>
-      {/* <Text.H size="3">Recent writings include...</Text.H>
-      <div className="my-4 mb-8 flex flex-col w-full">
-        <BlogLink name="Hello World" slug="hello-world" />
-      </div> */}
+      <div className="mb-8">
+        <span className="font-bold mr-1">TLDR:</span>
+        I've gone by many, many titles.{' '}
+        <Text.A external href="https://merki.ca/blog/what-is-a-wildcard-person">
+          Wildcard person
+        </Text.A>
+        is my natural state.
+      </div>
+      <Text.Prose className="mb-8">
+        <Text.H size="2">Philosophy & Mission</Text.H>
+
+        <Text.P>
+          I try to keep it simple: Do whatever the 🤬 you want, so long as it doesn't hurt anyone
+          else.
+        </Text.P>
+        <Text.P>
+          My goal is to have been a net-positive for planet earth by the time I travel on.
+        </Text.P>
+      </Text.Prose>
 
       <Text.H size="2">Find me places</Text.H>
       <ul className="flex flex-col md:flex-row space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-sm text-neutral-600 dark:text-neutral-300">
@@ -186,6 +187,11 @@ export default async function Page() {
         <li>
           <Text.A external href="http://www.github.com/t1mmen">
             github
+          </Text.A>
+        </li>
+        <li>
+          <Text.A external href="http://www.reddit.com/u/t1mmen">
+            reddit
           </Text.A>
         </li>
       </ul>
