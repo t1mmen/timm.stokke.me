@@ -6,14 +6,18 @@ import { Analytics } from '@vercel/analytics/react';
 
 const tagLine =
   'Passionately building apps, services and websites across desktop & mobile devices since 1997.';
-
+const baseUrl = new URL('https://timm.stokke.me');
 export const metadata: Metadata = {
-  metadataBase: new URL('https://timm.stokke.me'),
+  metadataBase: baseUrl,
   title: {
     default: 'Timm Stokke',
     template: '%s | Timm Stokke',
   },
   description: tagLine,
+  icons: [
+    { url: `${baseUrl}/android-chrome-192x192.png`, sizes: '192x192', type: 'image/png' },
+    { src: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
+  ],
   openGraph: {
     title: 'Timm Stokke',
     description: tagLine,
