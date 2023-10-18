@@ -2,6 +2,7 @@ import './global.scss';
 import clsx from 'clsx';
 import type { Metadata } from 'next';
 import Sidebar from './components/sidebar';
+import { Analytics } from '@vercel/analytics/react';
 
 const tagLine =
   'Passionately building apps, services and websites across desktop & mobile devices since 1997.';
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Sidebar />
           {children}
         </main>
+        <Analytics />
       </body>
     </html>
   );
