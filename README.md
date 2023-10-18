@@ -2,6 +2,8 @@
 
 # timm.stokke.me
 
-... because the `@todo` I've hosted there for 7 years was getting embarrassing.
+... because the `@todo` I've hosted there for 7 years was getting embarrassing. More to come.
 
-Starting point borrows heavily from [leerob](https://github.com/leerob/leerob.io), because I initially just needed a quick way to get a blog up and running. I'll be changing it up as I go along.
+#### Credits
+
+Starting point borrows heavily from [leerob/leerob.io](https://github.com/leerob/leerob.io). Thanks!
