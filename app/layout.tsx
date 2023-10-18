@@ -14,10 +14,6 @@ export const metadata: Metadata = {
     template: '%s | Timm Stokke',
   },
   description: tagLine,
-  icons: [
-    { url: `${baseUrl}/android-chrome-192x192.png`, sizes: '192x192', type: 'image/png' },
-    { src: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
-  ],
   openGraph: {
     title: 'Timm Stokke',
     description: tagLine,
