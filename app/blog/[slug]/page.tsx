@@ -4,6 +4,8 @@ import { Mdx } from 'app/components/mdx';
 import { allBlogs } from 'contentlayer/generated';
 import Balancer from 'react-wrap-balancer';
 import { formatDate, formatRelativeDate } from 'app/utils/datetime';
+import Comments from 'app/components/comments';
+import Text from 'app/components/text';
 
 export async function generateMetadata({ params }): Promise<Metadata | undefined> {
   const post = allBlogs.find(post => post.slug === params.slug);
@@ -56,15 +58,16 @@ export default async function Blog({ params }) {
           __html: JSON.stringify(post.structuredData),
         }}
       ></script>
-      <h1 className="font-bold text-2xl tracking-tighter max-w-[650px]">
+      <Text.H size="1" className="mb-0">
         <Balancer>{post.title}</Balancer>
-      </h1>
+      </Text.H>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm max-w-[650px]">
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           {formatDate(post.publishedAt)} ({formatRelativeDate(post.publishedAt)})
         </p>
       </div>
       <Mdx code={post.body.code} />
+      <Comments />
     </section>
   );
 }

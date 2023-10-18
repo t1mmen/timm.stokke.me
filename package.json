@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@giscus/react": "^2.3.0",
     "@vercel/analytics": "^1.1.1",
     "@vercel/edge-config": "^0.2.1",
     "clsx": "^2.0.0",
