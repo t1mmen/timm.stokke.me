@@ -9,18 +9,7 @@ import rideHoses from 'public/images/frontpage/ride-horses.jpg';
 import exploreStuff from 'public/images/frontpage/explore-stuff.jpg';
 import talkOnTheFruit from 'public/images/frontpage/talk-on-the-fruit.jpg';
 import indyTime from 'public/images/frontpage/d-o-double-g.jpg';
-import teddyTime from 'public/images/frontpage/d-o-double-gg.jpg';
-
-function ArrowIcon() {
-  return (
-    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
-        fill="currentColor"
-      />
-    </svg>
-  );
-}
+import marleyTime from 'public/images/frontpage/d-o-double-gg.jpg';
 
 export default async function Page() {
   return (
@@ -45,7 +34,7 @@ export default async function Page() {
       <div className="columns-2 sm:columns-3 gap-4 my-8 mt-4">
         <div className="relative h-40 mb-4">
           <Image
-            alt="todo"
+            alt="My fav chill buddy is Indy. She's awesome."
             src={indyTime}
             fill
             sizes="(max-width: 768px) 213px, 33vw"
@@ -55,7 +44,7 @@ export default async function Page() {
         </div>
         <div className="relative h-80 mb-4 sm:mb-0">
           <Image
-            alt="Explore stuff"
+            alt="The last nature that blew my mind"
             src={exploreStuff}
             fill
             sizes="(max-width: 768px) 213px, 33vw"
@@ -65,7 +54,7 @@ export default async function Page() {
         </div>
         <div className="relative h-40 sm:h-80 sm:mb-4">
           <Image
-            alt="todo"
+            alt="My line is wide open"
             src={talkOnTheFruit}
             fill
             sizes="(max-width: 768px) 213px, 33vw"
@@ -75,7 +64,7 @@ export default async function Page() {
         </div>
         <div className="relative h-40 mb-4 sm:mb-0">
           <Image
-            alt="Ride hoses"
+            alt="Horses don't hate me."
             src={rideHoses}
             fill
             sizes="(max-width: 768px) 213px, 33vw"
@@ -85,8 +74,8 @@ export default async function Page() {
         </div>
         <div className="relative h-40 mb-4">
           <Image
-            alt="todo"
-            src={teddyTime}
+            alt="Marley was the o.g d-o-double-g. We had great times, and I miss her."
+            src={marleyTime}
             fill
             sizes="(max-width: 768px) 213px, 33vw"
             priority
@@ -95,7 +84,7 @@ export default async function Page() {
         </div>
         <div className="relative h-80">
           <Image
-            alt="Exist in nature"
+            alt="Canadian nature is the best nature. I love Canada"
             src={inCanada}
             fill
             sizes="(min-width: 768px) 213px, 33vw"
