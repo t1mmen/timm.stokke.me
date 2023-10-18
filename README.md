@@ -6,4 +6,4 @@
 
 #### Credits
 
-Starting point borrows heavily from [leerob/leerob.io](https://github.com/leerob/leerob.io). Thanks!
+Starting point borrows heavily from [leerob/leerob.io](https://github.com/leerob/leerob.io). Thanks! 🙏
