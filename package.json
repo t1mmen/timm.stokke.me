@@ -1,26 +1,40 @@
 {
-  "name": "timmstokke",
-  "author": "Timm Stokke",
-  "description": "My personal homepage",
-  "version": "0.1.0",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:t1mmen/timm.stokke.me.git"
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "keywords": [
-    "Homepage",
-    "Portfolio",
-    "CV"
-  ],
+  "dependencies": {
+    "@vercel/analytics": "^1.0.2",
+    "@vercel/edge-config": "^0.2.1",
+    "clsx": "^2.0.0",
+    "contentlayer": "^0.3.4",
+    "dotenv": "^16.3.1",
+    "framer-motion": "^10.16.2",
+    "next": "13.4.19",
+    "next-contentlayer": "^0.3.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-tweet": "^3.1.1",
+    "react-wrap-balancer": "^1.1.0",
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-pretty-code": "^0.10.1",
+    "rehype-slug": "^6.0.0",
+    "remark-gfm": "^3.0.1",
+    "shiki": "^0.14.4"
+  },
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-copy": "~0.4.1",
-    "grunt-contrib-cssmin": "^0.10.0",
-    "grunt-contrib-imagemin": "~0.4.0",
-    "grunt-contrib-less": "~0.8.3",
-    "grunt-contrib-uglify": "~0.2.7",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-uncss": "^0.3.8"
+    "@tailwindcss/typography": "^0.5.9",
+    "@types/node": "20.5.8",
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.29",
+    "prettier": "3.0.3",
+    "sass": "^1.69.4",
+    "sharp": "^0.32.6",
+    "tailwindcss": "^3.3.3",
+    "typescript": "5.2.2"
   }
 }
