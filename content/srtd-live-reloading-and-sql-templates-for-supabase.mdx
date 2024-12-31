@@ -1,0 +1,127 @@
+---
+title: 'Live-Reloading Your SQL: How we made Database Changes Feel Modern Again'
+publishedAt: '2024-12-31 14:44'
+summary: "Hot-reload for your database functions? Yes, please! Here's how we sprinkled some modern DX on the Supabase workflow."
+---
+
+Have you ever looked at your SQL workflow and thought, "Wow, this feels... ancient"? 🏺
+
+That's exactly where I found myself while building [Timely](https://timely.com)'s next-generation Memory Engine. Here we were in 2023, with hot-reloading everything on the frontend, yet still copy-pasting SQL into database consoles like it was 1999.
+
+### The Breaking Point 💔
+
+Picture this: You're working on a 400-line Postgres function. You spot a tiny bug - maybe a missing column in the output, or a typo in an error message. Should be a quick fix, right?
+
+Ha! Welcome to the dance:
+
+1. Find the function in your editor
+2. Copy the entire thing
+3. Paste into Supabase's SQL Editor
+4. Make the change
+5. Run it
+6. Keep iterating
+7. Happy? Copy the entire thing back to your local file
+8. Oh wait, let's tweak it some more...
+9. Accidentally close the tab, losing all your changes
+10. 🤯
+
+Don't even get me started on version control. Every time someone tweaked a function, our PRs looked like complete rewrites. Imagine trying to review this when you're not deep in the codebase:
+
+```diff
++ CREATE OR REPLACE FUNCTION process_memory_item()
++ [... 400 lines of seemingly changed code ...]
+```
+
+Good luck spotting the actual change in there!
+
+The real problem? The change was probably just adding a single column to the output. But of course git doesn't know that - it sees the whole function as new.
+
+### The `srtd` Way 🚀
+
+What if database changes could feel as smooth as frontend development? What if we could:
+
+- Edit SQL and have it instantly reflected in the database
+- Have meaningful git diffs
+- Keep a single source of truth
+- Never accidentally lose changes again
+- Have long-running, merged WIP migrations without accidentally deploying them
+
+That's exactly what SRTD ([Supabase](https://supabase.com) Repeatable Template Definitions) does. It watches your SQL templates and hot-reloads them into your local database. Just like your frontend changes, but for SQL!
+
+```bash
+srtd watch
+# Now edit any .sql file and watch the magic happen! ✨
+```
+
+### Building My First CLI 🛠️
+
+Here's where it gets interesting. I needed a tool, but I'd never built a CLI before. Enter [Ink](https://github.com/vadimdemedes/ink) and [Pastel](https://github.com/vadimdemedes/create-pastel-app) - React for your terminal!
+
+If you've ever thought "I should build a CLI for that", but were intimidated by the thought, let me tell you: it's never been easier. Ink lets you use familiar React patterns to build beautiful terminal UIs:
+
+```tsx filename=src/components/Watch.tsx
+function Watch() {
+  return (
+    <Box flexDirection="column">
+      <Text color="green">Watching for changes... ⚡️</Text>
+      <LiveReloadLogs />
+      <Text dimColor>Press q to quit</Text>
+    </Box>
+  );
+}
+```
+
+The result? A modern, interactive CLI that makes database changes feel as natural as frontend development.
+
+### The AI Collaboration Angle 🤖
+
+`srtd` was built in collaboration with [Claude](https://claude.ai) Projects. The process was fascinating - and solidified my general feeling as "being simultaneously ecstatic about technological progress while drowning in existential dread about its implications."
+
+Interesting times ahead, no doubt.
+
+Using tools like [repomix](https://github.com/yamadashy/repomix) to package the entire codebase for AI consumption, I relied heavily on voice-to-text to converse with Claude about the implementation focus.
+
+### The Impact 💫
+
+The best part? It's changed how we think about database changes. That internal resistance to making small improvements? Gone. Now it's just:
+
+1. Open template
+2. Make change
+3. Save, instantly reflected in the database
+4. When satisfied, `srtd build`, and commit the changes
+5. 🎉
+
+No more copy-paste dance, no more "which version is the truth?", no more PR review headaches.
+
+And the my typescript-world colleagues? "Wait, how was this not a thing already?!"
+
+Indeed. 🤷‍♂️
+
+### Want to Try It?
+
+Getting started is as easy as:
+
+```bash
+npm install -g @t1mmen/srtd
+cd your-supabase-project
+srtd init
+srtd watch
+```
+
+Create your first template in `supabase/migrations-templates/my_function.sql`, and watch the magic happen! ✨
+
+The project is [open source on GitHub](https://github.com/t1mmen/srtd), and I'd love your feedback!
+
+### The Bigger Picture 🌅
+
+`srtd` isn't just about hot-reloading SQL. It's about bringing modern developer experience to database development. We've had these patterns on the frontend for decades - it's time the database layer caught up!
+
+Is it perfect? Highly unlikely. But it's made our DX significantly better, and maybe it'll help you too!
+
+Remember: Sometimes the best solutions come from your own pain points. And if you can pair up with an AI to build it? Even better! Just... maybe not think too hard about what that means for our future. 😅
+
+---
+
+- _Disclaimer: A large part of this post is written by Claude. I'm not sure how I feel about that yet. 🤖_
+
+- _PS: If you're building CLIs, seriously check out Ink. Being able to use React patterns in the terminal is a game-changer!_ 🎮

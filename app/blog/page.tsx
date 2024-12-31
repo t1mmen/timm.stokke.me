@@ -14,16 +14,18 @@ export default async function BlogPage() {
     <section>
       <Text.H size="1">I wrote some words</Text.H>
       <div className="max-w-screen-sm mb-8"></div>
-      {allBlogs
-        .sort((a, b) => {
-          if (new Date(a.publishedAt) > new Date(b.publishedAt)) {
-            return -1;
-          }
-          return 1;
-        })
-        .map(post => (
-          <BlogItem post={post} />
-        ))}
+      <div className="grid gap-4 lg:grid-cols-2">
+        {allBlogs
+          .sort((a, b) => {
+            if (new Date(a.publishedAt) > new Date(b.publishedAt)) {
+              return -1;
+            }
+            return 1;
+          })
+          .map(post => (
+            <BlogItem post={post} />
+          ))}
+      </div>
     </section>
   );
 }

@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import avatar from 'app/avatar.png';
 import timelySvg from 'public/images/timely.svg';
 import Text from './components/text';
 
@@ -155,6 +154,10 @@ export default async function Page() {
         <Text.P>
           I try to keep it simple: Do whatever the 🤬 you want, so long as it doesn't hurt anyone
           else.
+        </Text.P>
+        <Text.P>
+          The real magic of the world is to make something better, _without_ making something else
+          worse.
         </Text.P>
         <Text.P>
           My goal is to have been a net-positive for planet earth by the time I travel on.
