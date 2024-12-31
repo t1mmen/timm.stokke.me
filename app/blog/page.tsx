@@ -22,8 +22,8 @@ export default async function BlogPage() {
             }
             return 1;
           })
-          .map(post => (
-            <BlogItem post={post} />
+          .map((post, idx) => (
+            <BlogItem key={idx} post={post} />
           ))}
       </div>
     </section>
